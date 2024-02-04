@@ -43,7 +43,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="  w-full px-4 h-11">
+    <nav className="overflow-hidden  w-full px-6 md:p-10 lg:px-40 md:px-32 h-11 md:mx-10 lg:mx-40">
       <div className="flex flex-grow items-center pt-3 gap-2">
         {links.map((link) => (
           <div key={link.linkId}>
