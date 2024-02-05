@@ -7,7 +7,7 @@ import { Dosis } from "next/font/google";
 
 const dosis = Dosis({
   subsets: ["latin"],
-  weight: "500",
+  // weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -22,12 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-black antialiased text-white",
-          dosis.className
-        )}
-      >
+      <body className={cn(" bg-black antialiased text-white", dosis.className)}>
         <Navbar />
         {children}
       </body>

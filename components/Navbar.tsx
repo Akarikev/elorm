@@ -7,6 +7,8 @@ import { buttonVariants } from "./ui/button";
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { TwitterLogoIcon } from "@radix-ui/react-icons";
+import { MailOpenIcon } from "lucide-react";
 
 type LinkType = {
   linkId: number;
@@ -63,6 +65,10 @@ function Navbar() {
             </Link>
           </div>
         ))}
+
+        <Link href={"https://www.x.com/elorm.tsx"}>
+          <TwitterLogoIcon />
+        </Link>
       </div>
     </nav>
   );
