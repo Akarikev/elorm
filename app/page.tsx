@@ -16,10 +16,10 @@ export default function Home() {
   const featuredContent: contentType = [
     {
       id: 1,
-      contentName: "reuseonline",
-      contentLink: "http://reuseonline.vercel.app",
+      contentName: "rewritething",
+      contentLink: "http://rewritething.online",
       contentDescription:
-        "React custom hook that checks the online status of a user's device",
+        "Rewrite Thing is a SaaS project currently under development, it is intended to use AI to help rewrite essays and correct grammatical errors. You can join the waitlist with the link below",
       isLive: true,
     },
     {
@@ -40,7 +40,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="min-h-screen">
+    <div className="">
       <main className="flex antialiased  flex-col  ">
         <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 ">
           <div className="border px-2 mt-20 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
@@ -134,15 +134,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className="border-t mt-10 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30  from-inherit p-4">
-        <div className="font-light  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
-          <h1>&copy; 2024, elorm.tsx</h1>
-          <p>Develps Inc</p>
-          <p>proudly made in ghana(❁´◡`❁)</p>
-          <p>All rights reserved</p>
-        </div>
-      </footer>
     </div>
   );
 }
