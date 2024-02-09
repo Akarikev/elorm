@@ -24,18 +24,26 @@ export default function Home() {
     },
     {
       id: 2,
-      contentName: "reuseonline",
-      contentLink: "http://reuseonline.vercel.app",
+      contentName: "Talkee.app",
+      contentLink: "https://talkeeapp.netlify.app/",
       contentDescription:
-        "React custom hook that checks the online status of a user's device",
-      isLive: false,
+        "Talkee is a platform where users can freely share their thoughts and ideas anonymously with others in a social setting.",
+      isLive: true,
     },
     {
       id: 3,
       contentName: "reuseonline",
       contentDescription:
-        "React custom hook that checks the online status of a user's device",
+        "A custom React hook designed to monitor the online status of a user's device.",
       contentLink: "http://reuseonline.vercel.app",
+      isLive: true,
+    },
+    {
+      id: 4,
+      contentName: "Kira chat",
+      contentDescription:
+        "Kira is an integration of ChatGPT on WhatsApp for conversational interactions.",
+      contentLink: "https://kira-ai.vercel.app/",
       isLive: false,
     },
   ];
@@ -110,7 +118,12 @@ export default function Home() {
                   >
                     <div>
                       <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
-                        <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
+                        {content.isLive === true ? (
+                          <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
+                        ) : (
+                          <CircleDot className="text-yellow-200 animate-pulse w-4 h-4" />
+                        )}
+
                         <p className="text-green-400 text-center ">
                           {content.contentName}
                         </p>
