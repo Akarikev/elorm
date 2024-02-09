@@ -45,32 +45,40 @@ function Navbar() {
   );
 
   return (
-    <nav className="overflow-hidden  px-6 md:p-10 lg:px-40 md:px-32 h-11 md:mx-10 lg:mx-40">
-      <div className="flex flex-grow items-center pt-3 gap-2">
-        {links.map((link) => (
-          <div key={link.linkId}>
-            <Link
-              href={`${link.linkPath}`}
-              className={cn(
-                buttonVariants({
-                  variant: "link",
-                }),
-                {
-                  "text-bold hover:text-white": !link.isSelected,
-                  "text-red-500": link.isSelected,
-                }
-              )}
-            >
-              {link.linkName}
-            </Link>
-          </div>
-        ))}
-
-        <Link href={"https://www.x.com/elorm.tsx"}>
-          <TwitterLogoIcon />
-        </Link>
+    <div>
+      <div className="text-2xl font-bold mt-3">
+        <h1 className="px-6  lg:px-40 md:px-32  md:mx-10 lg:mx-40">
+          elorm.tsx
+        </h1>
       </div>
-    </nav>
+
+      <nav className="overflow-hidden  px-6 md:p-10 lg:px-40 md:px-32 h-11 md:mx-10 lg:mx-40">
+        <div className="flex flex-grow items-center pt-3 gap-2">
+          {links.map((link) => (
+            <div key={link.linkId}>
+              <Link
+                href={`${link.linkPath}`}
+                className={cn(
+                  buttonVariants({
+                    variant: "link",
+                  }),
+                  {
+                    "text-bold hover:text-white": !link.isSelected,
+                    "text-red-500": link.isSelected,
+                  }
+                )}
+              >
+                {link.linkName}
+              </Link>
+            </div>
+          ))}
+
+          <Link href={"https://twitter.com/elorm_elom"}>
+            <TwitterLogoIcon className="hover:text-white w-6 h-6" />
+          </Link>
+        </div>
+      </nav>
+    </div>
   );
 }
 

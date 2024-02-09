@@ -37,7 +37,7 @@ export default function RootLayout({
           <div className="font-light  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
             <h1>&copy; 2024, elorm.tsx</h1>
             <p>Develps Inc</p>
-            <p>proudly made in ghana(❁´◡`❁)</p>
+            <p>proudly Ghanaian(❁´◡`❁)</p>
             <p>All rights reserved</p>
 
             <div>
