@@ -110,39 +110,51 @@ export default function Home() {
 
             <div>
               <h1 className="font-bold text-xl mt-10 ">Featured</h1>
-              {featuredContent.map((content) => {
-                return (
-                  <div
-                    className="border-b mt-5 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
-                    key={content.id}
-                  >
-                    <div>
-                      <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
-                        {content.isLive === true ? (
-                          <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
-                        ) : (
-                          <CircleDot className="text-yellow-200 animate-pulse w-4 h-4" />
-                        )}
-
-                        <p className="text-green-400 text-center ">
-                          {content.contentName}
-                        </p>
-                      </div>
-
-                      <p className="text-gray-400 mt-2">
-                        {content.contentDescription}
-                      </p>
-
-                      <Link
-                        href={`${content.contentLink}`}
-                        className="underline text-base"
-                      >
-                        {content.contentLink}
-                      </Link>
-                    </div>
+              <>
+                <div className="mt-5 flex gap-4">
+                  <div>
+                    <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
+                    <p>Active</p>
                   </div>
-                );
-              })}
+                  <div>
+                    <CircleDot className="text-yellow-200 animate-pulse w-4 h-4" />
+                    <p>Inactive / Suspended</p>
+                  </div>
+                </div>
+                {featuredContent.map((content) => {
+                  return (
+                    <div
+                      className="border-b mt-5 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                      key={content.id}
+                    >
+                      <div>
+                        <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
+                          {content.isLive === true ? (
+                            <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
+                          ) : (
+                            <CircleDot className="text-yellow-200 animate-pulse w-4 h-4" />
+                          )}
+
+                          <p className="text-green-400 text-center ">
+                            {content.contentName}
+                          </p>
+                        </div>
+
+                        <p className="text-gray-400 mt-2">
+                          {content.contentDescription}
+                        </p>
+
+                        <Link
+                          href={`${content.contentLink}`}
+                          className="underline text-base"
+                        >
+                          {content.contentLink}
+                        </Link>
+                      </div>
+                    </div>
+                  );
+                })}
+              </>
             </div>
           </div>
         </div>

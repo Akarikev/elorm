@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Dosis } from "next/font/google";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { PendingUI } from "@/components/ui/pending-ui";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         )}
       >
         <Navbar />
+        {/* <PendingUI /> */}
         {children}
 
         <footer className="border-t mt-10 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30  from-inherit p-4">
