@@ -10,7 +10,7 @@ import { PendingUI } from "@/components/ui/pending-ui";
 
 const dosis = Dosis({
   subsets: ["latin"],
-  // weight: "500",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          " bg-black antialiased text-white min-h-screen",
+          " bg-zinc-900 antialiased text-white min-h-screen  ",
           dosis.className
         )}
       >
