@@ -1,4 +1,4 @@
-import { featuredContent } from "@/lib/content";
+import { featuredContent } from "@/lib/projects";
 import { CircleDot } from "lucide-react";
 import Link from "next/link";
 
@@ -57,6 +57,8 @@ function page() {
               })}
             </div>
           </div>
+
+          {/* dev packages */}
         </div>
       </div>
     </div>

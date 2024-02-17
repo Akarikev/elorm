@@ -7,6 +7,7 @@ import { Dosis } from "next/font/google";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { PendingUI } from "@/components/ui/pending-ui";
+import Image from "next/image";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -42,10 +43,18 @@ export default function RootLayout({
             <p>proudly Ghanaian(❁´◡`❁)</p>
             <p>All rights reserved</p>
 
-            <div>
+            <div className="flex gap-4">
               <Link href={"https://github.com/Akarikev"}>
                 <GitHubLogoIcon className="w-6 h-6 mt-3 " />
               </Link>
+
+              <Image
+                src={"/elorm-logo/vector/default-monochrome-white.svg"}
+                width={90}
+                height={90}
+                alt="elorm-logo"
+                className=" w-12 h-12 "
+              />
             </div>
           </div>
         </footer>

@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { TwitterLogoIcon } from "@radix-ui/react-icons";
 import { MailOpenIcon } from "lucide-react";
+import Image from "next/image";
 
 type LinkType = {
   linkId: number;
@@ -47,9 +48,16 @@ function Navbar() {
   return (
     <div>
       <div className="text-2xl font-bold mt-3">
-        <h1 className="px-6  lg:px-40 md:px-32  md:mx-10 lg:mx-40">
+        {/* <h1 className="px-6  lg:px-40 md:px-32  md:mx-10 lg:mx-40">
           elorm.tsx
-        </h1>
+        </h1> */}
+        <Image
+          src={"/elorm-logo/vector/default-monochrome-white.svg"}
+          width={120}
+          height={120}
+          alt="elorm-logo"
+          className="object-fit ml-9 mt-4 mb-4  lg:ml-80 md:ml-32  "
+        />
       </div>
 
       <nav className="overflow-hidden  px-6 md:p-10 lg:px-40 md:px-32 h-11 md:mx-10 lg:mx-40">
