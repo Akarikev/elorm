@@ -83,7 +83,7 @@ export default function Home() {
                   >
                     tailwind,
                   </Link>
-                  :: i mean everyone loves tailwind
+                  <span></span> :: i mean everyone loves tailwind
                 </div>
               </div>
             </div>
