@@ -60,6 +60,32 @@ export default function Home() {
                   stuffs am working on or already worked on
                 </Link>
               </p>
+
+              <div className="mt-4 text-gray-400">
+                <div className="ml-2">
+                  i use tools such as{" "}
+                  <Link
+                    href={`https://nextjs.org`}
+                    className="underline text-white ml-1"
+                  >
+                    Nextjs,
+                  </Link>
+                  <Link
+                    href={`https://vitejs.dev`}
+                    className="underline text-white ml-1 mr-1"
+                  >
+                    Vitejs,
+                  </Link>
+                  and
+                  <Link
+                    href={`https://tailwindcss.com`}
+                    className="underline text-white ml-1"
+                  >
+                    tailwind,
+                  </Link>
+                  :: i mean everyone loves tailwind
+                </div>
+              </div>
             </div>
 
             {/* featured */}
