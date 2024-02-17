@@ -23,6 +23,18 @@ export const featuredContent: contentType = [
       "Talkee is a platform where users can freely share their thoughts and ideas anonymously with others in a social setting.",
     isLive: true,
   },
+
+  //   {
+  //     id: 6,
+  //     contentName: "Kira chat",
+  //     contentDescription:
+  //       "Kira is an integration of ChatGPT on WhatsApp for conversational interactions.",
+  //     contentLink: "https://kira-ai.vercel.app/",
+  //     isLive: false,
+  //   },
+];
+
+export const devTools: contentType = [
   {
     id: 3,
     contentName: "reuseonline",
@@ -31,6 +43,9 @@ export const featuredContent: contentType = [
     contentLink: "http://reuseonline.vercel.app",
     isLive: true,
   },
+];
+
+export const AITools: contentType = [
   {
     id: 4,
     contentName: "Kira chat",
@@ -45,14 +60,6 @@ export const featuredContent: contentType = [
     contentDescription:
       "Gem AI is an integration of Gemini AI Pro  for conversational interactions.",
     contentLink: "https://gemai.vercel.app/",
-    isLive: false,
-  },
-  {
-    id: 6,
-    contentName: "Kira chat",
-    contentDescription:
-      "Kira is an integration of ChatGPT on WhatsApp for conversational interactions.",
-    contentLink: "https://kira-ai.vercel.app/",
-    isLive: false,
+    isLive: true,
   },
 ];
