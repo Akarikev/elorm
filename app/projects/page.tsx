@@ -49,7 +49,7 @@ function page() {
 
           <div>
             <div>
-              <h1 className="text-xl mt-4 ">Apps</h1>
+              <h1 className="text-xl mt-10">Apps</h1>
               {featuredContent.map((content) => {
                 return (
                   <div
@@ -86,7 +86,7 @@ function page() {
             </div>
 
             {/* dev packages */}
-            <div className="mt-4">
+            <div className="mt-10">
               <h1 className="text-xl mt-6 ">Dev Packages</h1>
 
               {devTools.map((devTool) => {
@@ -128,7 +128,7 @@ function page() {
           {/* AI Tools */}
 
           <div>
-            <h1 className="text-xl mt-4 ">AI Apps</h1>
+            <h1 className="text-xl mt-10">AI Apps</h1>
             {AITools.map((content) => {
               return (
                 <div
@@ -164,8 +164,19 @@ function page() {
             })}
           </div>
 
-          <div>
-            <div></div>
+          <div className="mt-10 text-gray-400">
+            <div>
+              check my{" "}
+              <span>
+                <Link
+                  href="https://github.com/Akarikev"
+                  className="underline text-white"
+                >
+                  github
+                </Link>
+              </span>{" "}
+              to see other cool stuffs
+            </div>
           </div>
         </div>
       </div>
