@@ -2,7 +2,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="lex flex-col mt-5 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
+    <div className="lex flex-col min-h-screen mt-5 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
       <div>
         <div>
           <h1 className="text-xl text-bold mt-10 mb-2">Elorm.tsx</h1>
