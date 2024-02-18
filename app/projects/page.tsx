@@ -1,19 +1,25 @@
 import { AITools, devTools, featuredContent } from "@/lib/projects";
 import { CircleDot } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "elorm ⚡ | Projects",
+  description: "hey, elorm's Projects!",
+};
 
 function page() {
   return (
-    <div className="flex flex-col mt-5 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
+    <div className="flex flex-col min-h-screen mt-5 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
       <div className="mt-10">
         <div>
           {/* Title */}
-          <h1>Projects</h1>
+          <h1 className="text-xl">Projects</h1>
 
           {/* intro */}
           <div className="text-gray-400 ">
-            <p className="tracking-wide mt-2">
-              I have built several projects, but these are the ones I could
+            <p className="tracking-wider mt-2">
+              I&#39;ve built several projects, but these are the ones I could
               showcase _: just proud of them tbh
             </p>
           </div>
@@ -57,7 +63,7 @@ function page() {
                     key={content.id}
                   >
                     <div>
-                      <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
+                      <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-800 flex items-center justify-center cursor-pointer align-middle">
                         {content.isLive === true ? (
                           <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
                         ) : (

@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       <main className="flex antialiased  flex-col  ">
         <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 ">
-          <div className="border px-2 mt-20 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
+          <div className="border px-2 mt-20 w-fit rounded-lg border-none gap-x-1 bg-gray-800 flex items-center justify-center cursor-pointer align-middle">
             <HeartFilledIcon className="text-green-400 animate-pulse" />
             <p className="text-green-400 text-center  animate">welcome</p>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
                 am a self taught{" "}
                 <span className=" text-white">frontend engineer</span> and a{" "}
                 <span className=" text-white">
-                  computer science grad!🎉 {""}
+                  computer science grad!👨‍🎓 {""}
                 </span>
                 wanna get to know me more check
                 <Link
@@ -45,8 +45,8 @@ export default function Home() {
                   //   className: " text-white ",
                   // })}
                 >
-                  about.
-                </Link>
+                  about
+                </Link>{" "}
                 or{" "}
                 <Link
                   href={"/projects"}
@@ -61,7 +61,7 @@ export default function Home() {
                 </Link>
               </p>
 
-              <div className="mt-4 text-gray-400">
+              {/* <div className="mt-4 text-gray-400">
                 <div className="ml-2">
                   i use tools such as{" "}
                   <Link
@@ -85,7 +85,7 @@ export default function Home() {
                   </Link>
                   <span></span> :: i mean everyone loves tailwind
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* featured */}
@@ -110,7 +110,7 @@ export default function Home() {
                       key={content.id}
                     >
                       <div>
-                        <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-900 flex items-center justify-center cursor-pointer align-middle">
+                        <div className="border px-2 w-fit rounded-lg border-none gap-x-1 bg-gray-800 flex items-center justify-center cursor-pointer align-middle">
                           {content.isLive === true ? (
                             <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
                           ) : (
