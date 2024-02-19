@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   title: "elorm ⚡",
   description: "hey, elorm is awesome!",
 
-  // icons: {
-  //   icon: "/favicon.ico",
-  //   shortcut: "/favicon.ico",
-  //   apple: "/favicon.ico",
-  // },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 
   applicationName: "elorm's cool portfolio🎉",
   keywords: [

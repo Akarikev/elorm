@@ -7,7 +7,7 @@ import { featuredContent } from "@/lib/content";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="min-h-screen">
       <main className="flex antialiased  flex-col  ">
         <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 ">
           <div className="border px-2 mt-20 w-fit rounded-lg border-none gap-x-1 bg-gray-800 flex items-center justify-center cursor-pointer align-middle">
