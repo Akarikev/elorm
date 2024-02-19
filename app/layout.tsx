@@ -16,7 +16,7 @@ const dosis = Dosis({
 
 export const metadata: Metadata = {
   title: "elorm ⚡",
-  description: "hey, elorm is awesome!",
+  description: "hey, elorm is awesome! - super creative 👺 frontend dev",
 
   icons: {
     icon: "/favicon.ico",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "elorm ⚡ dev ",
-    description: "hey, elorm is awesome!",
+    description: "hey, elorm is awesome! - super creative 👺 frontend dev",
     creator: "@elorm_elom",
     images: ["https://elorm.vercel.app/elorm-logo/default.png"],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: "https://elorm.vercel.app/elorm-logo/default.png",
     title: "elorm ⚡ dev ",
-    description: "hey, elorm is awesome!",
+    description: "hey, elorm is awesome! - super creative 👺 frontend dev",
   },
 };
 
@@ -64,10 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(
-          " bg-zinc-900 antialiased text-white min-h-screen  ",
-          dosis.className
-        )}
+        className={cn(" bg-zinc-900 antialiased text-white ", dosis.className)}
       >
         <Navbar />
         {/* <PendingUI /> */}
