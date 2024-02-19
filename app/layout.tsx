@@ -17,6 +17,43 @@ const dosis = Dosis({
 export const metadata: Metadata = {
   title: "elorm ⚡",
   description: "hey, elorm is awesome!",
+
+  // icons: {
+  //   icon: "/favicon.ico",
+  //   shortcut: "/favicon.ico",
+  //   apple: "/favicon.ico",
+  // },
+
+  applicationName: "elorm's cool portfolio🎉",
+  keywords: [
+    "web developer",
+    "elorm.tsx",
+    "frontend engineer",
+    "app developer",
+    "hiring jobs developer",
+    "web app developer",
+    "developer portfolio",
+    "Nextjs developer",
+    "react developer",
+    "hire web developer",
+    "frontend developer",
+    "prince elorm developer",
+    "web developer portfolio",
+    "elorm developer",
+  ],
+  twitter: {
+    card: "summary_large_image",
+    title: "elorm ⚡ dev ",
+    description: "hey, elorm is awesome!",
+    creator: "@elorm_elom",
+    images: ["https://elorm.vercel.app/elorm-logo/default.png"],
+  },
+
+  openGraph: {
+    images: "https://elorm.vercel.app/elorm-logo/default.png",
+    title: "elorm ⚡ dev ",
+    description: "hey, elorm is awesome!",
+  },
 };
 
 export default function RootLayout({
@@ -42,6 +79,11 @@ export default function RootLayout({
             <p>Develps Inc</p>
             <p>proudly Ghanaian(❁´◡`❁)</p>
             <p>All rights reserved</p>
+            <p className="text-green-500 font-bold rounded-lg  w-fit ">
+              version 1.1.0
+            </p>
+
+            <p>{"/|/."}</p>
 
             <div className="flex gap-4">
               <Link href={"https://github.com/Akarikev"}>
