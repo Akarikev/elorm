@@ -28,9 +28,11 @@ function page() {
           </p>
 
           <div className="mt-20">
-            <p className="italics text-gray-400">
-              do what you like most, stay motivated, be your own motivation!
+            <p className="italic text-gray-400 tracking-wide">
+              &quot;do what you like most, stay motivated, be your own
+              motivation!&quot;
             </p>
+            {/* <p className="text-right"> - i made it up</p> */}
           </div>
 
           <div className="mt-10 bg-green-950 p-4 rounded-md shadow-md">
@@ -73,6 +75,21 @@ function page() {
               hello@elorm.site
               {/* <Mail /> */}
             </Link>
+
+            <br />
+            <br />
+
+            <span className=" bg-yellow-900 ">
+              am not only a frontend dev, ive got some hobbies too...
+              <br />
+              Like music. check out some of music on{" "}
+              <Link
+                href={"https://linktr.ee/princeemuse"}
+                className="underline"
+              >
+                all streaming platforms here
+              </Link>
+            </span>
           </div>
         </div>
       </div>
