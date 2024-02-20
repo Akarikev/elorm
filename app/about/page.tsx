@@ -82,12 +82,12 @@ function page() {
             <span className=" bg-yellow-900 ">
               am not only a frontend dev, ive got some hobbies too...
               <br />
-              Like music. check out some of music on{" "}
+              Like music. check out some of music on all streaming platforms{" "}
               <Link
                 href={"https://linktr.ee/princeemuse"}
                 className="underline"
               >
-                all streaming platforms here
+                here
               </Link>
             </span>
           </div>
