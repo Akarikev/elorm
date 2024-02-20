@@ -1,4 +1,7 @@
+import { InfoCircledIcon } from "@radix-ui/react-icons";
+import { Mail } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "elorm ⚡ | about",
@@ -23,6 +26,54 @@ function page() {
             {" "}
             i&apos;m motivated to learn anything that looks cool to me!
           </p>
+
+          <div className="mt-20">
+            <p className="italics text-gray-400">
+              do what you like most, stay motivated, be your own motivation!
+            </p>
+          </div>
+
+          <div className="mt-10 bg-green-950 p-4 rounded-md shadow-md">
+            <div>
+              <div className="flex justify-between">
+                <h1 className="font-bold text-xl underline">
+                  Frontend Engineer / Developer ?
+                </h1>
+                <InfoCircledIcon className="w-6 h-6 font-bold" />
+              </div>
+
+              <p className="tracking-wide">
+                hey there! So, why am I into frontend engineering? honestly, I
+                just love seeing those stunning web designs out there on the
+                internet! 🌟
+                <br />
+                <br />
+                People sometimes think being a frontend engineer means just
+                tweaking a bit of CSS, but there&apos;s actually a whole lot
+                more to it! 😄
+                <br />
+                <br />
+                i don&apos;t just stick to the frontend either; i like to dabble
+                in the backend too. 💻 In fact, most of my projects are
+                full-stack applications! 🚀
+                <br />
+                <br />
+                So, when I say I&apos;m a frontend engineer, don&apos;t take it
+                too literally. There&apos;s always more than meets the eye! 😉
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <span>Wanna talk, send me an email: </span>
+            <Link
+              href="mailto:hello@elorm.site"
+              className="underline text-gray-200"
+            >
+              hello@elorm.site
+              {/* <Mail /> */}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
