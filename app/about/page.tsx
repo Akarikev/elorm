@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "elorm ⚡ | about",
-  description: "this is elorm.tsx!",
+  description: "this is elorm.tsx! - everything you need to know  👺",
 };
 
 function page() {
