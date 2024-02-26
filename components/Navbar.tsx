@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { MailOpenIcon } from "lucide-react";
 import Image from "next/image";
-
+import { ModeToggle } from "@/components/ui/theme-toggler";
 type LinkType = {
   linkId: number;
   linkName: string;
@@ -89,6 +89,8 @@ function Navbar() {
           <Link href={"https://github.com/Akarikev"}>
             <GitHubLogoIcon className="w-6 h-6 ml-2 " />
           </Link>
+
+          {/* <ModeToggle /> */}
         </div>
       </nav>
     </div>
