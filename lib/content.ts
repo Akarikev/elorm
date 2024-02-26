@@ -10,7 +10,7 @@ export const featuredContent: contentType = [
   {
     id: 1,
     contentName: "rewritething",
-    contentLink: "http://rewritething.online",
+    contentLink: "https://rewritething.online",
     contentDescription:
       "Rewrite Thing is a SaaS project currently under development, it is intended to use AI to help rewrite essays and correct grammatical errors. You can join the waitlist with the link below",
     isLive: true,

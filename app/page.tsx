@@ -71,7 +71,7 @@ export default function Home() {
                     Nextjs,
                   </Link>
                   <Link
-                    href={`https://vitejs.dev`}
+                    hr                `ef={`https://vitejs.dev`}
                     className="underline text-white ml-1 mr-1"
                   >
                     Vitejs,
@@ -93,7 +93,7 @@ export default function Home() {
               <div>
                 <div className="flex justify-center items-center">
                   <h1 className="rounded-md p-1 mb-2 bg-zinc-800 w-fit">
-                    Image of the week
+                    🏆 Image of the week
                   </h1>
                 </div>
 
@@ -115,7 +115,10 @@ export default function Home() {
                 </p>
 
                 <small className="mt-5 text-center text-gray-400">
-                  <p className="italic">okay notgr, am game</p>
+                  <p className="italic">
+                    okay <span className="text-white underline">notgr</span> ,
+                    am game
+                  </p>
                 </small>
               </div>
             </div>
@@ -161,6 +164,7 @@ export default function Home() {
                         <Link
                           href={`${content.contentLink}`}
                           className="underline text-base"
+                          target="_blank"
                         >
                           {content.contentLink}
                         </Link>

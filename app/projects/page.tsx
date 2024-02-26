@@ -31,12 +31,14 @@ function page() {
               <Link
                 href={`https://nextjs.org`}
                 className="underline text-white ml-1"
+                target="_blank"
               >
                 Nextjs,
               </Link>
               <Link
                 href={`https://vitejs.dev`}
                 className="underline text-white ml-1 mr-1"
+                target="_blank"
               >
                 Vitejs,
               </Link>
@@ -44,6 +46,7 @@ function page() {
               <Link
                 href={`https://tailwindcss.com`}
                 className="underline text-white ml-1"
+                target="_blank"
               >
                 tailwind,
               </Link>
@@ -82,6 +85,7 @@ function page() {
                       <Link
                         href={`${content.contentLink}`}
                         className="underline text-base"
+                        target="_blank"
                       >
                         {content.contentLink}
                       </Link>
