@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
 
                 <Image
-                  src="/image.png"
+                  src="/image (1).png"
                   width={280}
                   height={280}
                   alt="elorm pic of the day"
