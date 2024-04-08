@@ -77,7 +77,7 @@ function Navbar() {
                   // buttonVariants({
                   //   variant: "link",
                   // }),
-                  "mr-4 text-base",
+                  "mr-4 text-[13px]",
                   {
                     " hover:underline hover:": !link.isSelected,
                     "w-fit  bg-green-900 p-1 rounded-md": link.isSelected,
