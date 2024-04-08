@@ -22,7 +22,7 @@ export default function Home() {
               <IceCream className="w-8 h-8 lg:w-12 lg:h-12 text-green-300" />
             </h1>
 
-            <p className=" text-[14px] leading-2 mt-4">
+            <p className="  mt-4">
               hey there, it&#39;s Prince Elorm, or just elorm if you&#39;re
               feeling chill. Friends like to spice things up and call me Kev! 🚀
               I&#39;m a creative soul diving headfirst into all the cool stuff

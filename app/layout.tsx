@@ -70,7 +70,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          " bg-zinc-900 antialiased text-white font-sans",
+          " bg-zinc-900 text-[14px] lg:text-[15.5px] antialiased text-white font-sans",
           fontSans.variable
         )}
       >
