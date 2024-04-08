@@ -41,6 +41,12 @@ function Navbar() {
         linkName: "about",
         isSelected: pathname === "/about",
       },
+      {
+        linkId: 4,
+        linkPath: "/blog",
+        linkName: "blog",
+        isSelected: pathname === "/blog",
+      },
     ],
     [pathname]
   );
@@ -66,6 +72,7 @@ function Navbar() {
             <div key={link.linkId}>
               <Link
                 href={`${link.linkPath}`}
+                aria-disabled={link.linkName === "blog"}
                 className={cn(
                   // buttonVariants({
                   //   variant: "link",
@@ -74,6 +81,8 @@ function Navbar() {
                   {
                     " hover:underline hover:": !link.isSelected,
                     "w-fit  bg-green-900 p-1 rounded-md": link.isSelected,
+                    "text-gray-600 cursor-not-allowed ":
+                      link.linkName === "blog",
                   }
                 )}
               >
