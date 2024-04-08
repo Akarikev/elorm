@@ -2,6 +2,7 @@ import { AITools, devTools, featuredContent } from "@/lib/projects";
 import { CircleDot } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "elorm ⚡ | Projects",
@@ -17,10 +18,10 @@ function page() {
           <h1 className="text-xl">Projects</h1>
 
           {/* intro */}
-          <div className="text-gray-400 ">
-            <p className="tracking-wider mt-2">
+          <div className=" ">
+            <p className="mt-2">
               I&#39;ve built several projects, but these are the ones I could
-              showcase _: just proud of them tbh
+              showcase 😁 just proud of them tbh
             </p>
           </div>
 

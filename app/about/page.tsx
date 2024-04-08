@@ -1,6 +1,7 @@
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 import { Mail } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,10 +14,12 @@ function page() {
     <div className="flex flex-col min-h-screen mt-5 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
       <div>
         <div>
-          <h1 className="text-xl text-bold mt-10 mb-2">Elorm.tsx</h1>
+          <h1 className="text-xl text-bold font-semibold mt-10 mb-2">
+            Elorm.tsx
+          </h1>
           <small className=" text-gray-400">Super Creative 👺</small>
 
-          <p className="tracking-wide">
+          <p className="">
             Born in Ghana, a small country in the West of Africa. A lot of
             things have shaped me, and{" "}
             <span className="font-bold underline">inspired me</span> 🔥
@@ -27,6 +30,46 @@ function page() {
             i&apos;m motivated to learn anything that looks cool to me!
           </p>
 
+          {/* Image */}
+
+          {/* Image  */}
+
+          <div className="flex justify-center items-center mt-10">
+            <div>
+              <div className="flex justify-center items-center">
+                {/* <h1 className="rounded-md p-1 mb-2 bg-zinc-800 w-fit">
+                  🏆 Image of the week
+                </h1> */}
+              </div>
+
+              <Image
+                src="/yow.png"
+                width={230}
+                height={230}
+                alt="elorm pic of the day"
+                className="object-fit rounded-md"
+              />
+
+              {/* <p className="mt-2 text-center text-gray-400">
+                Image by{" "}
+                <span className="text-white underline">Cat Sticker Studio</span>
+              </p> */}
+
+              <p className="mt-2 text-center text-gray-400 font-medium">
+                よー、冷やし続けてね！
+              </p>
+              <p className="mt-2 text-center text-gray-400">
+                yow keep chilling！
+              </p>
+
+              {/* <small className="mt-5 text-center text-gray-400">
+                  <p className="italic">
+                    okay <span className="text-white underline">notgr</span> ,
+                    am game
+                  </p>
+                </small> */}
+            </div>
+          </div>
           <div className="mt-20">
             <p className="italic text-gray-400 tracking-wide">
               &quot;do what you like most, stay motivated, be your own
@@ -44,7 +87,7 @@ function page() {
                 <InfoCircledIcon className="w-6 h-6 font-bold" />
               </div>
 
-              <p className="tracking-wide">
+              <p className="">
                 hey there! So, why am I into frontend engineering? honestly, I
                 just love seeing those stunning web designs out there on the
                 internet! 🌟

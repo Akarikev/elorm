@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
-import { Dosis } from "next/font/google";
+import { Dosis, Inter as FontSans } from "next/font/google";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -12,6 +12,11 @@ import Image from "next/image";
 const dosis = Dosis({
   subsets: ["latin"],
   weight: "500",
+});
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -64,7 +69,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(" bg-zinc-900 antialiased text-white ", dosis.className)}
+        className={cn(
+          " bg-zinc-900 antialiased text-white font-sans",
+          fontSans.variable
+        )}
       >
         <ThemeProvider
           attribute="class"

@@ -47,7 +47,7 @@ function Navbar() {
 
   return (
     <div className="transition-all duration-150">
-      <div className="text-2xl font-bold mt-3">
+      <div className="font-bold mt-3">
         {/* <h1 className="px-6  lg:px-40 md:px-32  md:mx-10 lg:mx-40">
           elorm.tsx
         </h1> */}
