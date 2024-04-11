@@ -1,15 +1,22 @@
 import { Loader2Icon } from "lucide-react";
 import React from "react";
+import { getCategorizedBlogs } from "@/lib/articles";
+import type { blogItemType } from "@/types";
+import BlogList from "@/components/blog-list";
 
 function page() {
+  const blogs = getCategorizedBlogs();
+
+  // console.log(blogs);
   return (
-    <div className="text-center mt-2 flex justify-center  items-center gap-9 flex-col">
-      <div className="inline-flex items-center gap-2">
-        <Loader2Icon className="animate-spin w-14 h-14 text-center" />
-        still working on here.... 👨‍💻☕🚀
+    <div className=" flex flex-col min-h-screen mt-10 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
+      <div>
+
+        {blogs !== null &&
+          Object.keys(blogs).map((blog) => (
+            <BlogList category={blog} blogs={blogs[blog]} key={blog} />
+          ))}
       </div>
-      wip
-      <p>This is where i write my thoughts</p>
     </div>
   );
 }

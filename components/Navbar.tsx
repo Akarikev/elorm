@@ -11,14 +11,18 @@ import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { MailOpenIcon } from "lucide-react";
 import Image from "next/image";
 import { ModeToggle } from "@/components/ui/theme-toggler";
+
+import { getSortedBlog } from "@/lib/articles";
+
 type LinkType = {
-  linkId: number;
+  linkId: any;
   linkName: string;
   linkPath: string;
   isSelected?: boolean; // Fix the type here
 }[];
 
 function Navbar() {
+  // const blogD = getSortedBlog().map((blg) => blg.id);
   const pathname = usePathname();
 
   const links: LinkType = useMemo(
@@ -47,6 +51,13 @@ function Navbar() {
         linkName: "blog",
         isSelected: pathname === "/blog",
       },
+
+      // {
+      //   linkId: blogD,
+      //   linkName: "blog",
+      //   isSelected: pathname === `/blog/${blogD}`,
+      //   linkPath: "/blog/",
+      // },
     ],
     [pathname]
   );
@@ -81,8 +92,6 @@ function Navbar() {
                   {
                     " hover:underline hover:": !link.isSelected,
                     "w-fit  bg-green-900 p-1 rounded-md": link.isSelected,
-                    "text-gray-600 cursor-not-allowed ":
-                      link.linkName === "blog",
                   }
                 )}
               >
