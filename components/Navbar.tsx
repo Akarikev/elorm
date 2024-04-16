@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { useState } from "react";
 import { buttonVariants } from "./ui/button";
 import { useMemo } from "react";
