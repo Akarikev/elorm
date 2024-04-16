@@ -1,9 +1,11 @@
-import { Lollipop } from "lucide-react";
+import { Lollipop, Music } from "lucide-react";
 import React from "react";
 import Image from "next/image";
+import { CandyPeople } from "@/lib/people";
+import { Link } from "next-view-transitions";
 function page() {
   return (
-    <div className="mt-16 px-4 md:px-10 lg:px-24 min-h-screen">
+    <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 min-h-screen mt-16">
       <div>
         <h1 className="font-bold inline-flex items-center gap-2  text-xl tracking-tight md:tracking-tight md:text-3xl">
           Candies <Lollipop className="w-8 h-8 text-red-500" />
@@ -29,7 +31,46 @@ function page() {
       </div>
 
       {/* Candies start here */}
-      <div></div>
+      <div>
+        <h1 className=" mt-6 font-bold text-xl tracking-tight md:text-2xl md:tracking-tighter">
+          People
+        </h1>
+        <p className="italic">here are some cool people</p>
+
+        {/* Candy People */}
+        <div>
+          {CandyPeople.map((people) => {
+            return (
+              <div key={people.candyId}>
+                <h1 className="font-bold mt-4 inline-flex items-center gap-3 justify-center">
+                  {people.candyName}
+                  {people.candyType === "Artist" ? (
+                    <Music className="w-6 h-6 bg-green-400/10 p-1.5 rounded-md   " />
+                  ) : (
+                    <small className="no-underline bg-blue-600 px-1.5 rounded-md">
+                      {people.candyType}
+                    </small>
+                  )}
+                </h1>
+                <p>{people.candyDesc}</p>
+
+                <Link
+                  href={`${people.candyLink?.candyLin!}`}
+                  target="_blank"
+                  className="underline text-sm mt-3 text-slate-400"
+                >
+                  <p className="text-sm">
+                    {" "}
+                    {people.candyLink?.candyLin!
+                      ? "listen to his music"
+                      : people.candyLinknr}
+                  </p>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
