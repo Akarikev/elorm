@@ -3,6 +3,33 @@ import React from "react";
 import Image from "next/image";
 import { CandyPeople } from "@/lib/people";
 import { Link } from "next-view-transitions";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "elorm 🍬 candies",
+  description: "hey, elorm is sharing some candies - 🍬",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "elorm ⚡ candies ",
+    description: "hey, elorm is sharing some candies - 🍬 ",
+    creator: "@elorm_elom",
+    images: ["https://elorm.site/candies_OG.png"],
+  },
+
+  openGraph: {
+    images: "https://elorm.site/candies_OG.png",
+    title: "elorm ⚡ candies ",
+    description: "hey, elorm is sharing some candies - 🍬",
+  },
+};
+
 function page() {
   return (
     <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 min-h-screen mt-16">
@@ -24,9 +51,9 @@ function page() {
           width={230}
           height={230}
           alt="elorm pic of the day"
-          className="object-fit rounded-md object-center mt-2"
+          className="object-fit rounded-md object-center mt-6"
         />
-        <p className="mt-2 ">私は非常に興奮しています！</p>
+        <p className="mt-5">私は非常に興奮しています！</p>
         <small className="mt-1 underline"> gojo is excited!</small>
       </div>
 
