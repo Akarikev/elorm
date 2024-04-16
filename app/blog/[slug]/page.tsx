@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 import { getBlogData } from "@/lib/articles";
 import { Metadata } from "next";
 import { getSortedBlog } from "@/lib/articles";

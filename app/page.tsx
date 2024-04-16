@@ -2,7 +2,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { HeartFilledIcon } from "@radix-ui/react-icons";
 import { CircleDot, Hand, IceCream } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { featuredContent } from "@/lib/content";
 
 export default function Home() {
