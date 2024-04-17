@@ -1,7 +1,7 @@
 import { FileWarning, Lollipop, Music } from "lucide-react";
 import React from "react";
 import Image from "next/image";
-import { CandyPeople } from "@/lib/people";
+import { CandyMusicPeople, candyPeople } from "@/lib/people";
 import { Link } from "next-view-transitions";
 import type { Metadata } from "next";
 
@@ -66,18 +66,13 @@ function page() {
 
         {/* Candy People */}
         <div>
-          {CandyPeople.map((people) => {
+          {CandyMusicPeople.map((people) => {
             return (
               <div key={people.candyId}>
                 <h1 className="font-bold mt-4 inline-flex items-center gap-2 justify-center">
                   {people.candyName}
-                  {people.candyType === "Artist" ? (
-                    <Music className="w-6 h-6 bg-green-600/10 p-1.5 rounded-md  animate-pulse " />
-                  ) : (
-                    <small className="no-underline bg-blue-600 px-1.5 rounded-md">
-                      {people.candyType}
-                    </small>
-                  )}
+
+                  <Music className="w-6 h-6 bg-green-600/10 p-1.5 rounded-md  animate-pulse " />
                 </h1>
                 <p className="text-gray-300">{people.candyDesc}</p>
 
@@ -86,16 +81,37 @@ function page() {
                   target="_blank"
                   className="underline text-sm mt-3 text-slate-400"
                 >
-                  <p className="text-sm">
-                    {" "}
-                    {people.candyLink?.candyLin!
-                      ? "listen to his music"
-                      : people.candyLinknr}
-                  </p>
+                  <p className="text-sm">{people.candyLink.candyLinkName}</p>
                 </Link>
               </div>
             );
           })}
+
+          {/* candy other people */}
+          <div>
+            {candyPeople.map((people) => {
+              return (
+                <div key={people.candyId}>
+                  <h1 className="font-bold mt-4 inline-flex items-center gap-2 justify-center">
+                    {people.candyName}
+
+                    <small className="no-underline bg-blue-600 px-1.5 rounded-md">
+                      {people.candyType}
+                    </small>
+                  </h1>
+                  <p className="text-gray-300">{people.candyDesc}</p>
+
+                  <Link
+                    href={`${people.candyLinknr}`}
+                    target="_blank"
+                    className="underline text-sm mt-3 text-slate-400"
+                  >
+                    {people.candyLinknr}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
 
           {/* Music Candy */}
           <div className="mt-16">

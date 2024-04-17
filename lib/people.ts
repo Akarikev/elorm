@@ -1,15 +1,24 @@
-// type CandyType = {
-//   candyId: number;
-//   candyName: string;
-//   candyType: string;
-//   candyDesc: string;
-//   candyLink: {
-//     candyLinkName: string;
-//     candyLin: string;
-//   };
-// }[];
+type CandyMusicType = {
+  candyId: number;
+  candyName: string;
+  candyType: string;
+  candyDesc: string;
+  candyLink: {
+    candyLinkName: string;
+    candyLin: string;
+  };
+}[];
 
-export const CandyPeople = [
+type CandyPeopleType = {
+  candyId: number;
+  candyName: string;
+  candyType: string;
+  candyDesc: string;
+
+  candyLinknr: string;
+}[];
+
+export const CandyMusicPeople: CandyMusicType = [
   {
     candyId: 1,
     candyName: "Ollie",
@@ -45,6 +54,9 @@ export const CandyPeople = [
       candyLin: "https://open.spotify.com/artist/5G9kmDLg3OeUyj8KVBLzbu",
     },
   },
+];
+
+export const candyPeople: CandyPeopleType = [
   {
     candyId: 3,
     candyName: "notgr - Degreat GR",
