@@ -85,4 +85,12 @@ export const CandyPeople = [
       " hey there my gorgeous friends on the internet - one of the best youtube teacher ever! formerly know as Dev Ed. learnt a lotta JS from this man",
     candyLinknr: "https://www.youtube.com/@developedbyed",
   },
+  {
+    candyId: 9,
+    candyName: "Marc Lou",
+    candyType: "Solopreneur ",
+    candyDesc:
+      "built 5 start ups alone and making $$$ from it. i dunno this guy kinda gives me a motivation to continue buildinf and making stuffs",
+    candyLinknr: "https://x.com/marc_louvion",
+  },
 ];
