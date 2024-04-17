@@ -53,6 +53,15 @@ export const CandyPeople = [
       "Just greatness! purely coding genius. i love to copy his stuffs. i still don't believe he is Ghanaian",
     candyLinknr: "https://degreat.co.uk",
   },
+
+  {
+    candyId: 8,
+    candyName: "cirlorm",
+    candyType: "sonofman",
+    candyDesc: " god i beg! - another super creative!",
+    candyLinknr: "https://www.cirlorm.dev",
+  },
+
   {
     candyId: 4,
     candyName: "josh ",
