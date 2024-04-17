@@ -1,4 +1,4 @@
-import { Lollipop, Music } from "lucide-react";
+import { FileWarning, Lollipop, Music } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import { CandyPeople } from "@/lib/people";
@@ -50,7 +50,7 @@ function page() {
           src="/gojo.jpg"
           width={230}
           height={230}
-          alt="elorm pic of the day"
+          alt="gojo"
           className="object-fit rounded-md object-center mt-6"
         />
         <p className="mt-5">私は非常に興奮しています！</p>
@@ -62,24 +62,24 @@ function page() {
         <h1 className=" mt-6 font-bold text-xl tracking-tight md:text-2xl md:tracking-tighter">
           People
         </h1>
-        <p className="italic">here are some cool people</p>
+        <p className="italic text-gray-300">here are some cool people</p>
 
         {/* Candy People */}
         <div>
           {CandyPeople.map((people) => {
             return (
               <div key={people.candyId}>
-                <h1 className="font-bold mt-4 inline-flex items-center gap-3 justify-center">
+                <h1 className="font-bold mt-4 inline-flex items-center gap-2 justify-center">
                   {people.candyName}
                   {people.candyType === "Artist" ? (
-                    <Music className="w-6 h-6 bg-green-400/10 p-1.5 rounded-md   " />
+                    <Music className="w-6 h-6 bg-green-600/10 p-1.5 rounded-md  animate-pulse " />
                   ) : (
                     <small className="no-underline bg-blue-600 px-1.5 rounded-md">
                       {people.candyType}
                     </small>
                   )}
                 </h1>
-                <p>{people.candyDesc}</p>
+                <p className="text-gray-300">{people.candyDesc}</p>
 
                 <Link
                   href={`${people.candyLink?.candyLin!}`}
@@ -96,6 +96,62 @@ function page() {
               </div>
             );
           })}
+
+          {/* Music Candy */}
+          <div className="mt-16">
+            <h1 className=" mt-6 font-bold text-xl tracking-tight md:text-2xl md:tracking-tighter">
+              Music
+            </h1>
+            <p className="mt-2 ">
+              this is my go to playlist.
+              <br />
+              このプレイリストが大好きです
+            </p>
+
+            <small className="text-slate-400 ">
+              i tried to be unbiased as possible but...{" "}
+            </small>
+            <iframe
+              className="rounded-2xl mt-6"
+              src="https://open.spotify.com/embed/playlist/7fJtQd3BvnDW1hOtVGweeM?utm_source=generator"
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          {/* Tools candy */}
+          <div>
+            <h1 className=" mt-6 font-bold text-xl tracking-tight md:text-2xl md:tracking-tighter">
+              Tools
+            </h1>
+
+            <p className="mt-2 ">
+              here are some tools i use in my development process
+              <br />
+              これらのツールは素晴らしいです!
+            </p>
+
+            <Image
+              src="/chibi.gif"
+              width={230}
+              height={230}
+              alt="elorm pic of the day"
+              className="object-fit rounded-md object-center mt-6"
+            />
+            <small className="text-gray-400">うーん、ごめんなさい友達</small>
+
+            <p className="mt-6 text-red-300 bg-red-100/10 p-2 rounded-lg">
+              <FileWarning className="w-8 h-8 rounded-md  bg-gray-600 p-1.5 mb-1 mt-2" />
+              well... the thing is i use a lotta tools, that i think i might
+              exhaust the list... will compile the ones i use frequently
+              soon....
+              <br />
+              ごめん！
+            </p>
+          </div>
         </div>
       </div>
     </div>

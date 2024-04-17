@@ -19,7 +19,7 @@ export const CandyPeople = [
 
     candyLink: {
       candyLinkName: "Ollie's Music",
-      candyLin: "https://open.spotify.com/artist/6fOMl44jA4Sp5b9PpYCkzz",
+      candyLin: "https://open.spotify.com/artist/5OyoCvyau6TiGqcCKnDBCR",
     },
   },
 
@@ -30,19 +30,19 @@ export const CandyPeople = [
     candyDesc:
       "NF (NATHAN FEURESTEIN) is also an exceptional artist! with a unique, tranquil, and relatable music style. I adore his songs.",
     candyLink: {
-      candyLinkName: "NF's Music Link",
+      candyLinkName: "mike's Music Link",
       candyLin: "https://open.spotify.com/artist/6fOMl44jA4Sp5b9PpYCkzz",
     },
   },
   {
     candyId: 5,
-    candyName: "NF",
+    candyName: "mike",
     candyType: "Artist",
     candyDesc:
-      "NF(NATHAN FEURESTEIN) is also an exceptional artist! with a unique, tranquil, and relatable music style. I adore his songs.",
+      "blend of pop, hip-hop, country music and folk... URHEADY! am a stevie!",
     candyLink: {
       candyLinkName: "NF's Music Link",
-      candyLin: "https://open.spotify.com/artist/6fOMl44jA4Sp5b9PpYCkzz",
+      candyLin: "https://open.spotify.com/artist/5G9kmDLg3OeUyj8KVBLzbu",
     },
   },
   {
@@ -60,5 +60,20 @@ export const CandyPeople = [
     candyDesc:
       "josh is a  youtuber,  learnt most of the cool web dev stuffs from him. man this dude is just awesome!",
     candyLinknr: "https://joshtriedcoding.com",
+  },
+  {
+    candyId: 6,
+    candyName: "Brad Traversy ",
+    candyType: "Traversy Media ",
+    candyDesc: "everyone loves brad! best youtube teacher ever",
+    candyLinknr: "https://www.youtube.com/@TraversyMedia",
+  },
+  {
+    candyId: 7,
+    candyName: "DevelopedByEd",
+    candyType: "Dev Ed!",
+    candyDesc:
+      " hey there my gorgeous friends on the internet - one of the best youtube teacher ever! formerly know as Dev Ed. learnt a lotta JS from this man",
+    candyLinknr: "https://www.youtube.com/@developedbyed",
   },
 ];
