@@ -1,3 +1,3 @@
 ## ELORM IS SO COOL!
 
-![elorm's page](/page.png)
+![elorm's page](/public/page.png)
