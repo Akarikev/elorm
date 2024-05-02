@@ -1,4 +1,4 @@
-import { Link } from 'next-view-transitions'
+import { Link } from "next-view-transitions";
 import { getBlogData } from "@/lib/articles";
 import { Metadata } from "next";
 import { getSortedBlog } from "@/lib/articles";
@@ -6,10 +6,10 @@ import { ArrowLeftIcon } from "lucide-react";
 
 const blogTitles = getSortedBlog().map((blog) => blog.id);
 
-export const metadata: Metadata = {
-  title: `elorm ⚡ | ${blogTitles}`,
-  description: "this is elorm.tsx! - everything you need to know  👺",
-};
+// export const metadata: Metadata = {
+//   title: `elorm ⚡ | ${blogTitles}`,
+//   description: "this is elorm.tsx! - everything you need to know  👺",
+// };
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blogData = await getBlogData(params.slug);
