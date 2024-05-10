@@ -10,10 +10,10 @@ export default function Home() {
     <div className="min-h-screen ">
       <main className="flex antialiased  flex-col  ">
         <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 ">
-          <div className="border px-2 mt-20 w-fit rounded-lg border-none gap-x-1 bg-gray-800 inline-flex cursor-pointer   items-center">
-            <Hand className="text-green-400 animate-pulse w-4 h-4" />
-            <p className="text-green-400  text-center ">welcome</p>
-            <p className="ml-2 font-medium">いらっしゃいませ</p>
+          <div className="border px-2 mt-3  w-fit rounded-sm  gap-x-1  inline-flex cursor-pointer   items-center">
+            <Hand className="text-green-400 font-bold animate-pulse w-4 h-4" />
+            <p className="text-green-400 tracking-tight text-center ">HEY!</p>
+            <p className="ml-2 tracking-tight font-bold">いらっしゃいませ</p>
           </div>
 
           <div className="">
@@ -23,8 +23,8 @@ export default function Home() {
             </h1>
 
             <p className="  mt-4">
-              hey there, it&#39;s Prince Elorm, or just elorm if you&#39;re
-              feeling chill. Friends like to spice things up and call me Kev! 🚀
+              Hey there, it&#39;s Prince Elorm, or just elorm if you&#39;re
+              feeling chill. Friends like to spice things up and call me Kev!
               I&#39;m a creative soul diving headfirst into all the cool stuff
               that catches my eye – code, music, drawing, writing – you name it!
               🎨🎶✨
@@ -33,14 +33,17 @@ export default function Home() {
             <div>
               <p className=" mt-5">
                 am a self taught{" "}
-                <span className=" text-white">frontend engineer</span> and a{" "}
-                <span className=" text-white">
-                  computer science grad!👨‍🎓 {""}
+                <span className=" underline font-extrabold">
+                  frontend engineer
+                </span>{" "}
+                and a{" "}
+                <span className="underline text-blue-500 font-extrabold">
+                  computer science grad!
                 </span>
-                wanna get to know me more check
+                👨‍🎓 wanna get to know me more check
                 <Link
                   href={"/about"}
-                  className="ml-1 text-white underline"
+                  className="ml-1 text-green-500 font-semibold underline"
                   // className={buttonVariants({
                   //   variant: "link",
 
@@ -52,7 +55,7 @@ export default function Home() {
                 or{" "}
                 <Link
                   href={"/projects"}
-                  className="ml-1 text-white underline"
+                  className="ml-1 text-yellow-500 font-semibold underline"
                   // className={buttonVariants({
                   //   variant: "link",
 
@@ -94,8 +97,8 @@ export default function Home() {
             <div className="flex justify-center items-center mt-10">
               <div>
                 <div className="flex justify-center items-center">
-                  <h1 className="rounded-md p-1 mb-2 bg-zinc-800 w-fit">
-                    🏆 Image of the week
+                  <h1 className="p-1 mb-2 w-fit underline underline-offset-4 font-semibold">
+                    pov: me every night
                   </h1>
                 </div>
 
@@ -104,7 +107,7 @@ export default function Home() {
                   width={260}
                   height={260}
                   alt="elorm pic of the day"
-                  className="object-fit rounded-md"
+                  className="object-fit rounded-md border shadow-md"
                 />
 
                 {/* <p className="mt-2 text-center text-gray-400">
@@ -118,7 +121,7 @@ export default function Home() {
                   went to space btw
                 </p> */}
 
-                <small className="mt-5 text-center text-gray-400">
+                <small className="mt-5 text-center text-gray-500">
                   <p className="mt-5 font-medium text-[16px]">
                     コーディングが大好きです{" "}
                   </p>
@@ -146,7 +149,7 @@ export default function Home() {
                 {featuredContent.map((content) => {
                   return (
                     <div
-                      className="border-b mt-5 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md lg:flex lg:flex-row"
+                      className="shadow-md mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md lg:flex lg:flex-row"
                       key={content.id}
                     >
                       <div>
@@ -162,13 +165,11 @@ export default function Home() {
                           </p>
                         </div>
 
-                        <p className="text-gray-400 mt-2">
-                          {content.contentDescription}
-                        </p>
+                        <p className=" mt-2">{content.contentDescription}</p>
 
                         <Link
                           href={`${content.contentLink}`}
-                          className="underline text-base"
+                          className="underline text-sm"
                           target="_blank"
                         >
                           {content.contentLink}

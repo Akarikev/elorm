@@ -20,7 +20,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "elorm ⚡",
+  title: "Hey👋🏾 => elorm ⚡ ",
   description: "hey, elorm is awesome! - super creative 👺 frontend dev",
 
   icons: {
@@ -71,7 +71,7 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={cn(
-            " bg-zinc-900 text-[14px] lg:text-[15.5px] antialiased text-white font-sans",
+            " text-[14px] lg:text-[15.5px] antialiased  font-sans",
             fontSans.variable
           )}
         >
@@ -85,8 +85,8 @@ export default function RootLayout({
             {/* <PendingUI /> */}
             {children}
 
-            <footer className="border-t mt-10 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30  from-inherit p-4">
-              <div className="font-light  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
+            <footer className="border-t mt-10  bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30  from-inherit p-4">
+              <div className="text-sm  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
                 <h1>&copy; 2024, elorm.tsx</h1>
                 <p>Develps Inc</p>
                 <p>proudly Ghanaian(❁´◡`❁)</p>

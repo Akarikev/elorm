@@ -15,7 +15,7 @@ function page() {
       <div className="mt-10">
         <div>
           {/* Title */}
-          <h1 className="text-xl">Projects</h1>
+          <h1 className="text-xl font-semibold tracking-tighter">Projects</h1>
 
           {/* intro */}
           <div className=" ">
@@ -26,19 +26,19 @@ function page() {
           </div>
 
           {/* tools used */}
-          <div className="mt-4 text-gray-400">
+          <div className="mt-4 ">
             <div className="">
               I use tools such as{" "}
               <Link
                 href={`https://nextjs.org`}
-                className="underline text-white ml-1"
+                className="underline  ml-1"
                 target="_blank"
               >
                 Nextjs,
               </Link>
               <Link
                 href={`https://vitejs.dev`}
-                className="underline text-white ml-1 mr-1"
+                className="underline  ml-1 mr-1"
                 target="_blank"
               >
                 Vitejs,
@@ -46,12 +46,12 @@ function page() {
               and
               <Link
                 href={`https://tailwindcss.com`}
-                className="underline text-white ml-1"
+                className="underline  ml-1"
                 target="_blank"
               >
                 tailwind,
               </Link>
-              <span></span> :: i mean everyone loves tailwind
+              <span></span> :) i mean everyone loves tailwind
             </div>
           </div>
 
@@ -59,11 +59,13 @@ function page() {
 
           <div>
             <div>
-              <h1 className="text-xl mt-10">Apps</h1>
+              <h1 className="text-xl font-semibold tracking-tighter mt-10">
+                Apps
+              </h1>
               {featuredContent.map((content) => {
                 return (
                   <div
-                    className="border-b mt-5 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                    className="border-b mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
                     key={content.id}
                   >
                     <div>
@@ -79,9 +81,7 @@ function page() {
                         </p>
                       </div>
 
-                      <p className="text-gray-400 mt-2">
-                        {content.contentDescription}
-                      </p>
+                      <p className=" mt-2">{content.contentDescription}</p>
 
                       <Link
                         href={`${content.contentLink}`}
@@ -98,12 +98,14 @@ function page() {
 
             {/* dev packages */}
             <div className="mt-10">
-              <h1 className="text-xl mt-6 ">Dev Packages</h1>
+              <h1 className="text-xl font-semibold tracking-tighter mt-6 ">
+                Dev Packages
+              </h1>
 
               {devTools.map((devTool) => {
                 return (
                   <div
-                    className="border-b mt-5 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                    className="border-b mt-5 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
                     key={devTool.id}
                   >
                     <div>
@@ -119,9 +121,7 @@ function page() {
                         </p>
                       </div>
 
-                      <p className="text-gray-400 mt-2">
-                        {devTool.contentDescription}
-                      </p>
+                      <p className=" mt-2">{devTool.contentDescription}</p>
 
                       <Link
                         href={`${devTool.contentLink}`}
@@ -139,11 +139,13 @@ function page() {
           {/* AI Tools */}
 
           <div>
-            <h1 className="text-xl mt-10">AI Apps</h1>
+            <h1 className="text-xl font-semibold tracking-tighter mt-10">
+              AI Apps
+            </h1>
             {AITools.map((content) => {
               return (
                 <div
-                  className="border-b mt-5 border-neutral-800 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                  className="border-b mt-5 shadow-md bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
                   key={content.id}
                 >
                   <div>
@@ -159,9 +161,7 @@ function page() {
                       </p>
                     </div>
 
-                    <p className="text-gray-400 mt-2">
-                      {content.contentDescription}
-                    </p>
+                    <p className=" mt-2">{content.contentDescription}</p>
 
                     <Link
                       href={`${content.contentLink}`}
@@ -175,14 +175,11 @@ function page() {
             })}
           </div>
 
-          <div className="mt-10 text-gray-400">
+          <div className="mt-10 ">
             <div>
               check my{" "}
               <span>
-                <Link
-                  href="https://github.com/Akarikev"
-                  className="underline text-white"
-                >
+                <Link href="https://github.com/Akarikev" className="underline ">
                   github
                 </Link>
               </span>{" "}

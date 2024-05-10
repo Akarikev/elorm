@@ -38,7 +38,7 @@ function page() {
           Candies <Lollipop className="w-8 h-8 text-red-500" />
         </h1>
 
-        <p className="mt-1 text-gray-300">
+        <p className="mt-1 ">
           candies are small treasures of things and awesome individuals
           I&apos;ve stumbled upon online and am excited to share with all of
           you.
@@ -62,7 +62,7 @@ function page() {
         <h1 className=" mt-6 font-bold text-xl tracking-tight md:text-2xl md:tracking-tighter">
           People
         </h1>
-        <p className="italic text-gray-300">here are some cool people</p>
+        <p className="italic ">here are some cool people</p>
 
         {/* Candy People */}
         <div>
@@ -74,12 +74,12 @@ function page() {
 
                   <Music className="w-6 h-6 bg-green-600/10 p-1.5 rounded-md  animate-pulse " />
                 </h1>
-                <p className="text-gray-300">{people.candyDesc}</p>
+                <p className="">{people.candyDesc}</p>
 
                 <Link
                   href={`${people.candyLink?.candyLin!}`}
                   target="_blank"
-                  className="underline text-sm mt-3 text-slate-400"
+                  className="underline text-sm mt-3 text-slate-600 "
                 >
                   <p className="text-sm">{people.candyLink.candyLinkName}</p>
                 </Link>
@@ -99,12 +99,12 @@ function page() {
                       {people.candyType}
                     </small>
                   </h1>
-                  <p className="text-gray-300">{people.candyDesc}</p>
+                  <p className="">{people.candyDesc}</p>
 
                   <Link
                     href={`${people.candyLinknr}`}
                     target="_blank"
-                    className="underline text-sm mt-3 text-slate-400"
+                    className="underline text-sm mt-3 text-slate-500"
                   >
                     {people.candyLinknr}
                   </Link>
@@ -124,7 +124,7 @@ function page() {
               このプレイリストが大好きです
             </p>
 
-            <small className="text-slate-400 ">
+            <small className="">
               i tried to be unbiased as possible but...{" "}
             </small>
             <iframe
@@ -159,7 +159,7 @@ function page() {
             />
             <small className="text-gray-400">うーん、ごめんなさい友達</small>
 
-            <p className="mt-6 text-red-300 bg-red-100/10 p-2 rounded-lg">
+            <p className="mt-6  bg-red-400/10 p-2 rounded-lg">
               <FileWarning className="w-8 h-8 rounded-md  bg-gray-600 p-1.5 mb-1 mt-2" />
               well... the thing is i use a lotta tools, that i think i might
               exhaust the list... will compile the ones i use frequently

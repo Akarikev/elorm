@@ -28,7 +28,9 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           <h1 className="font-extrabold tracking-tight text-xl md:text-3xl">
             {blogData.title}
           </h1>
-          <p className="px-1 rounded-md bg-zinc-800  w-fit text-sm">
+
+          <p className="text-sm font-extrabold text-green-600">Author: elorm</p>
+          <p className="px-1 rounded-md mt-1 underline  w-fit text-xs">
             {blogData.date.toString()}
           </p>
         </div>
