@@ -44,11 +44,6 @@ export default function Home() {
                 <Link
                   href={"/about"}
                   className="ml-1 text-green-500 font-semibold underline"
-                  // className={buttonVariants({
-                  //   variant: "link",
-
-                  //   className: " text-white ",
-                  // })}
                 >
                   about
                 </Link>{" "}
@@ -56,41 +51,10 @@ export default function Home() {
                 <Link
                   href={"/projects"}
                   className="ml-1 text-yellow-500 font-semibold underline"
-                  // className={buttonVariants({
-                  //   variant: "link",
-
-                  //   className: " text-white ",
-                  // })}
                 >
                   stuffs am working on or already worked on
                 </Link>
               </p>
-
-              {/* <div className="mt-4 text-gray-400">
-                <div className="ml-2">
-                  i use tools such as{" "}
-                  <Link
-                    href={`https://nextjs.org`}
-                    className="underline text-white ml-1"
-                  >
-                    Nextjs,
-                  </Link>
-                  <Link
-                    hr                `ef={`https://vitejs.dev`}
-                    className="underline text-white ml-1 mr-1"
-                  >
-                    Vitejs,
-                  </Link>
-                  and
-                  <Link
-                    href={`https://tailwindcss.com`}
-                    className="underline text-white ml-1"
-                  >
-                    tailwind,
-                  </Link>
-                  <span></span> :: i mean everyone loves tailwind
-                </div>
-              </div> */}
             </div>
 
             {/* Image of the day */}
@@ -149,7 +113,7 @@ export default function Home() {
                 {featuredContent.map((content) => {
                   return (
                     <div
-                      className="shadow-md mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md lg:flex lg:flex-row"
+                      className="shadow-md mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  p-4 rounded-md lg:flex lg:flex-row"
                       key={content.id}
                     >
                       <div>

@@ -14,15 +14,21 @@ function page() {
     <div className="flex flex-col min-h-screen mt-5 px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
       <div>
         <div>
-          <h1 className="text-xl text-bold tracking-tighter font-bold mt-10 mb-2">
+          <h1 className="text-xl text-bold tracking-tighter font-extrabold mt-10 mb-2">
             elorm.tsx
           </h1>
-          <small className=" text-gray-400">Super Creative 👺</small>
+          <small className=" text-gray-400 bg-gray-500/10 p-0.5 rounded-md">
+            Super Creative 👺
+          </small>
 
           <p className="">
-            Born in Ghana, a small country in the West of Africa. A lot of
-            things have shaped me, and{" "}
-            <span className="font-bold underline">inspired me</span> 🔥
+            I&apos;m from Ghana, a beautiful country in West Africa. I&apos;ve
+            been lucky enough to have some amazing experiences and encounters
+            that have{" "}
+            <span className="font-bold underline">
+              helped shape me into the person I am today.
+            </span>{" "}
+            🔥
           </p>
 
           <p className="mt-4">
@@ -36,11 +42,7 @@ function page() {
 
           <div className="flex justify-center items-center mt-10">
             <div>
-              <div className="flex justify-center items-center">
-                {/* <h1 className="rounded-md p-1 mb-2 bg-zinc-800 w-fit">
-                  🏆 Image of the week
-                </h1> */}
-              </div>
+              <div className="flex justify-center items-center"></div>
 
               <Image
                 src="/yow.png"
@@ -71,7 +73,7 @@ function page() {
             </div>
           </div>
           <div className="mt-20">
-            <p className="italic text-gray-600 tracking-wide">
+            <p className="italic text-gray-500 tracking-wide">
               &quot;do what you like most, stay motivated, be your own
               motivation!&quot;
             </p>

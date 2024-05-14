@@ -31,14 +31,14 @@ function page() {
               I use tools such as{" "}
               <Link
                 href={`https://nextjs.org`}
-                className="underline  ml-1"
+                className="underline text-gray-700 tracking-tight font-extrabold  ml-1"
                 target="_blank"
               >
                 Nextjs,
               </Link>
               <Link
                 href={`https://vitejs.dev`}
-                className="underline  ml-1 mr-1"
+                className="underline text-pink-600 tracking-tight font-extrabold  ml-1 mr-1"
                 target="_blank"
               >
                 Vitejs,
@@ -46,7 +46,7 @@ function page() {
               and
               <Link
                 href={`https://tailwindcss.com`}
-                className="underline  ml-1"
+                className="underline text-blue-700 tracking-tight font-extrabold ml-1"
                 target="_blank"
               >
                 tailwind,
@@ -65,7 +65,7 @@ function page() {
               {featuredContent.map((content) => {
                 return (
                   <div
-                    className="border-b mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                    className="border-b mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  p-4 rounded-md"
                     key={content.id}
                   >
                     <div>
@@ -105,7 +105,7 @@ function page() {
               {devTools.map((devTool) => {
                 return (
                   <div
-                    className="border-b mt-5 bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                    className="border-b mt-5 bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  from-inherit p-4 rounded-md"
                     key={devTool.id}
                   >
                     <div>
@@ -145,7 +145,7 @@ function page() {
             {AITools.map((content) => {
               return (
                 <div
-                  className="border-b mt-5 shadow-md bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30 from-inherit p-4 rounded-md"
+                  className="border-b mt-5 shadow-md bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  p-4 rounded-md"
                   key={content.id}
                 >
                   <div>

@@ -85,7 +85,7 @@ export default function RootLayout({
             {/* <PendingUI /> */}
             {children}
 
-            <footer className="border-t mt-10  bg-gradient-to-b  backdrop-blur-2xl bg-zinc-800/30  from-inherit p-4">
+            <footer className="border-t mt-10  bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  p-4">
               <div className="text-sm  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
                 <h1>&copy; 2024, elorm.tsx</h1>
                 <p>Develps Inc</p>
@@ -97,6 +97,16 @@ export default function RootLayout({
 
                 <p>{"/|/."}</p>
 
+                <div className=" bg-gray-400/10 w-fit p-0.5 mt-1 rounded-md">
+                  design inspired by:
+                  <Link
+                    href={"https://degreat.co.uk"}
+                    className="underline text-sm ml-1"
+                  >
+                    degreat - GR
+                  </Link>
+                </div>
+
                 <div className="flex gap-4">
                   <Link href={"https://github.com/Akarikev"}>
                     <GitHubLogoIcon className="w-6 h-6 mt-3 " />
@@ -107,7 +117,7 @@ export default function RootLayout({
                     width={90}
                     height={90}
                     alt="elorm-logo"
-                    className=" w-12 h-12 "
+                    className=" w-12 h-12  "
                   />
                 </div>
               </div>
