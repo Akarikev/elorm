@@ -4,8 +4,11 @@ import { CircleDot, Hand, IceCream } from "lucide-react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 import { featuredContent } from "@/lib/content";
+import { getCategorizedBlogs } from "@/lib/articles";
+import BlogList from "@/components/blog-list";
 
 export default function Home() {
+  const blogs = getCategorizedBlogs();
   return (
     <div className="min-h-screen ">
       <main className="flex antialiased  flex-col  ">
@@ -149,6 +152,17 @@ export default function Home() {
               <Link href="/projects" className="underline">
                 check out some of my other projects
               </Link>
+            </div>
+          </div>
+
+          {/* Latest Posts */}
+          <div>
+            <h1 className="font-bold mt-5 mb-3">latest blogs</h1>
+            <div>
+              {blogs !== null &&
+                Object.keys(blogs).map((blog) => (
+                  <BlogList category={blog} blogs={blogs[blog]} key={blog} />
+                ))}
             </div>
           </div>
         </div>
