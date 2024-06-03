@@ -13,8 +13,10 @@ const BlogList: FC<bloglistProps> = ({ category, blogs }) => {
       {blogs.map((blog, id) => {
         return (
           <div key={id} className=" ">
-            <div className="inline-flex justify-center items-center gap-4">
-              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            <div className="flex justify-between items-center gap-4">
+              <Link href={`/blog/${blog.id}`} className="lowercase">
+                {blog.title}
+              </Link>
               <small className="font-bold justify-end">{blog.date}</small>
             </div>
             <hr className="my-2 border-gray-300" /> {/* Horizontal line */}

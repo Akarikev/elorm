@@ -25,6 +25,7 @@ export const getSortedBlog = (): blogItemType[] => {
       title: matterRes.data.title,
       date: matterRes.data.date,
       category: matterRes.data.category,
+      description: matterRes.data.description,
     };
   });
 
@@ -61,17 +62,18 @@ export const getBlogData = async (id: string) => {
 
   const matterRes = matter(fileContent);
 
-  const processContent = await remark()
-    .use(remarkHtml)
-    .process(matterRes.content);
+  // const processContent = await remark()
+  //   .use(remarkHtml)
+  //   .process(matterRes.content);
 
-  const contentHTML = processContent.toString();
+  const contentHTML = matterRes.content.toString();
 
   return {
     id,
     contentHTML,
     title: matterRes.data.title,
     category: matterRes.data.category,
+    description: matterRes.data.description,
     date: moment(matterRes.data.date, "DD-MM-YYYY").format("MMMM Do YYYY"),
   };
 };
