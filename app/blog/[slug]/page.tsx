@@ -44,6 +44,14 @@ export async function generateMetadata({
       type: "website",
     },
 
+    twitter: {
+      card: "summary_large_image",
+      title: `${getBlogsData.title} | elorm's Blog`,
+      description: getBlogsData.description,
+      creator: "@elorm_elom",
+      images: ["https://www.elorm.site/react-app.png"],
+    },
+
     keywords: [
       "elorm",
       "blogging",
