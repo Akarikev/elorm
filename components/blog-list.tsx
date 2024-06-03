@@ -16,13 +16,16 @@ const BlogList: FC<BlogListProps> = ({ category, blogs }) => {
 
   return (
     <div className="flex flex-col">
+      {/* <h1 className="font-bold md:font-extrabold md:text-2xl md:tracking-tighter">
+        blogs
+      </h1> */}
       {sortedBlogs.map((blog, id) => (
-        <div key={id} className="">
-          <div className="flex justify-between items-center gap-4">
+        <div key={id} className="p-0.5">
+          <div className="flex transition-all hover:bg-zinc-500 hover:rounded-sm dark:hover:bg-zinc-300 dark:hover:text-zinc-800 hover:text-gray-300 duration-100  justify-between items-center gap-4 p-0.5">
             <Link href={`/blog/${blog.id}`} className="lowercase">
-              {blog.title}
+              <p>{blog.title}</p>
             </Link>
-            <small className="font-bold justify-end">{blog.date}</small>
+            <small className="font-bold ">{blog.date}</small>
           </div>
           <hr className="my-2 border-gray-300" /> {/* Horizontal line */}
         </div>
