@@ -69,6 +69,13 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en">
+        <head>
+          <script
+            async
+            src="https://0.observe.so/script.js"
+            data-app="clwyye4yd003811f43qvdxvhf"
+          ></script>
+        </head>
         <body
           className={cn(
             " text-[14px] lg:text-[15.5px] antialiased  font-sans",
