@@ -40,7 +40,7 @@ export async function generateMetadata({
       url: `https://www.elorm.site/blog/${getBlogsData.id}`,
       siteName: `${getBlogsData.title} | elorm`,
       description: getBlogsData.description,
-      images: "https://www.elorm.site/react-app.png",
+      images: `https://www.elorm.site/${getBlogsData.image}`,
       type: "website",
     },
 
@@ -49,7 +49,7 @@ export async function generateMetadata({
       title: `${getBlogsData.title} | elorm's Blog`,
       description: getBlogsData.description,
       creator: "@elorm_elom",
-      images: ["https://www.elorm.site/react-app.png"],
+      images: [`https://www.elorm.site/${getBlogsData.image}`],
     },
 
     keywords: [

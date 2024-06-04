@@ -23,6 +23,7 @@ export const getSortedBlog = (): blogItemType[] => {
     return {
       id,
       title: matterRes.data.title,
+      image: matterRes.data.image,
       date: matterRes.data.date,
       category: matterRes.data.category,
       description: matterRes.data.description,
@@ -72,6 +73,7 @@ export const getBlogData = async (id: string) => {
     id,
     contentHTML,
     title: matterRes.data.title,
+    image: matterRes.data.image,
     category: matterRes.data.category,
     description: matterRes.data.description,
     date: moment(matterRes.data.date, "DD-MM-YYYY").format("MMMM Do YYYY"),

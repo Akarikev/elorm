@@ -4,4 +4,5 @@ export type blogItemType = {
   date: string;
   description: string;
   title: string;
+  image?: string;
 };

@@ -3,7 +3,7 @@ import React from "react";
 
 function Loading() {
   return (
-    <div className="transition-all flex flex-col min-h-screen gap-4">
+    <div className="transition-all flex flex-col min-h-screen gap-4 mx-auto">
       {/* <Loader2 className="w-6 h-6 animate-spin" /> */}
 
       <div className="bg-zinc-600 rounded-md animate-pulse h-7"></div>

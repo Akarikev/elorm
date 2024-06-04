@@ -4,6 +4,7 @@ title: "how to build a basic react todo app "
 category: "Me"
 description: "learn to build a basic todo app using reactjs"
 date: "03-06-2024"
+image: "react-app.png"
 ---
 
 ## Introduction
@@ -15,8 +16,7 @@ Creating a simple Todo application is a great way to get started with React, as 
 Before you begin, make sure you have the following installed on your computer:
 
 - [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [bun](https://bun.sh)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) or [bun](https://bun.sh)
 
 In this tutorial we'll be using bun, you can use any of the above package managers, I just feel bun is awesomely fast.
 **You should also be familiar with JavaScript and basic concepts of React.**
