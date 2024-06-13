@@ -1,6 +1,6 @@
 ---
 id: "focusing-on-one-programming-language"
-title: "The Case for Commitment: Focusing on One Programming Language"
+title: "The Case for Commitment"
 description: "Why You Should Date or commit to One Programming Language Before Marrying Another"
 category: "Me"
 date: "13-06-2024"
