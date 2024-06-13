@@ -9,7 +9,7 @@ image: "onelanguage.png"
 
 ---
 
-## The Case for Commitment: Focusing on One Programming Language
+## The Case for Commitment
 
 In January 2019, I decided to focus on web development and become a frontend engineer. I was mostly inspired by one of my friends, [cirlorm](https://www.cirlorm.dev). This guy was basically a genius. I told myself if he can create these cool things, I can too! I was 💯 motivated.
 
