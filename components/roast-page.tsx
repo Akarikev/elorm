@@ -77,10 +77,10 @@ function RoastPage(): JSX.Element {
 
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="name? "
             value={roastee}
             onChange={(e) => setRoastee(e.target.value)}
-            className="p-3 w-full rounded-lg bg-gray-100 dark:bg-transparent border-2 border-gray-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 ease-in-out shadow-sm hover:shadow-md outline-none mb-6"
+            className="p-3 w-full rounded-lg bg-gray-100 dark:bg-background border-2 border-gray-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 ease-in-out shadow-sm hover:shadow-md outline-none mb-6"
           />
         </div>
 
