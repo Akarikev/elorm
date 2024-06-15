@@ -19,7 +19,9 @@
     "canvas": "^2.11.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "downloadjs": "^1.4.7",
     "gray-matter": "^4.0.3",
+    "html-to-image": "^1.11.11",
     "html2canvas": "^1.4.1",
     "jimp": "^0.22.12",
     "lucide-react": "^0.323.0",
@@ -37,6 +39,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/downloadjs": "^1.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -7,6 +7,9 @@ import { Download, FileWarning, LaughIcon, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Amatic_SC, Dosis } from "next/font/google";
 import { cn } from "@/lib/utils";
+import * as htmlToImage from "html-to-image";
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
+import download from "downloadjs";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -34,28 +37,32 @@ function RoastPage(): JSX.Element {
   const handleDownloadImage = () => {
     startTransition(() => {
       const roastContainer = document.querySelector("#roastContainer");
-      if (roastContainer) {
-        html2canvas(roastContainer as HTMLElement)
-          .then((canvas) => {
-            const link = document.createElement("a");
-            link.download = "roast.png";
-            link.href = canvas.toDataURL();
-            link.click();
+      // if (roastContainer) {
+      //   html2canvas(roastContainer as HTMLElement)
+      //     .then((canvas) => {
+      //       const link = document.createElement("a");
+      //       link.download = "roast.png";
+      //       link.href = canvas.toDataURL();
+      //       link.click();
 
-            // Check if the user is on iPhone/iPad
+      //       // Check if the user is on iPhone/iPad
 
-            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      //       const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-            if (isIOS) {
-              const linkDr = (link.href = canvas.toDataURL());
-              window.location.href = linkDr;
-              alert("Long press to download");
-            }
-          })
-          .catch((err) => {
-            console.error("Error generating image:", err);
-          });
-      }
+      //       if (isIOS) {
+      //         const linkDr = (link.href = canvas.toDataURL());
+      //         window.location.href = linkDr;
+      //         alert("Long press to download");
+      //       }
+      //     })
+      //     .catch((err) => {
+      //       console.error("Error generating image:", err);
+      //     });
+      // }
+
+      htmlToImage.toPng(roastContainer as HTMLElement).then(function (dataUrl) {
+        download(dataUrl, `${roastee + `'s` + `_roast.png`}`);
+      });
     });
   };
 
