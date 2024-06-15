@@ -47,10 +47,9 @@ function RoastPage(): JSX.Element {
             const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
             if (isIOS) {
-              window.location.href = link.href = canvas.toDataURL();
+              const linkDr = (link.href = canvas.toDataURL());
+              window.location.href = linkDr;
               alert("Long press to download");
-            } else {
-              link.click();
             }
           })
           .catch((err) => {
