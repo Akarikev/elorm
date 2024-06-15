@@ -41,6 +41,17 @@ function RoastPage(): JSX.Element {
             link.download = "roast.png";
             link.href = canvas.toDataURL();
             link.click();
+
+            // Check if the user is on iPhone/iPad
+
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+            if (isIOS) {
+              window.location.href = link.href = canvas.toDataURL();
+              alert("Long press to download");
+            } else {
+              link.click();
+            }
           })
           .catch((err) => {
             console.error("Error generating image:", err);
