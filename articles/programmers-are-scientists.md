@@ -47,7 +47,7 @@ The tech industry evolves at a rapid pace, with new languages, frameworks, and t
 ### 2. Adapting to Change
 
 _Adaptability_ is a key trait for both programmers and scientists. As new challenges arise, programmers must quickly adapt and find innovative ways to address them. This flexibility and willingness to embrace change are hallmarks of a scientific mindset.
-_(copied this from Mark Zuckerberg or Elon Musk, one of them, nerrrh not quite show which one)_
+_(copied this from Mark Zuckerberg or Elon Musk, one of them, nerrrh not quite sure which one)_
 
 ## Collaboration and Peer Review
 
