@@ -9,7 +9,7 @@ image: "elorm's programmers are scientist too.png"
 
 # Programmers Are Scientists Too!
 
-> _"I've definetely been leaving under a rock, I just noticed this!, and it's **12:50am (Midnight)** here, \*sips coffee"_
+> _"I've definitely been leaving under a rock, I just noticed this!, and it's **12:50am (Midnight)** here, just thought it'll be cool if I write on it, \*sips coffee"_
 
 In the ever-evolving landscape of _technology and innovation_, programmers often find themselves at the crossroads of creativity and logic. The stereotype of a programmer as merely a code monkey, typing away lines of code in a dimly lit room, is outdated and underestimates the true nature of their work. The reality is that programmers are, in many ways, scientists. They employ the scientific method, engage in rigorous problem-solving, and constantly push the boundaries of what is possible with technology. Let’s delve into why programmers deserve to be recognized as scientists.
 
