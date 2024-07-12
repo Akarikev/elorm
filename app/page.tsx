@@ -29,7 +29,6 @@ export default function Home() {
               headfirst into all the cool stuff that catches my eye – code,
               music, drawing, writing – you name it! ✨
               <span>
-                <br />
                 also a 10x certified youtube university frontend engineer, trust
                 me bro :)
               </span>
