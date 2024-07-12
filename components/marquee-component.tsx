@@ -42,14 +42,6 @@ import { CircleDot } from "lucide-react";
 //   },
 // ];
 
-type contentType = {
-  id: number;
-  contentName: string;
-  contentLink: string;
-  contentDescription: string;
-  isLive: boolean;
-}[];
-
 const firstRow = featuredContent.slice(0, featuredContent.length / 2);
 const secondRow = featuredContent.slice(featuredContent.length / 2);
 
@@ -69,7 +61,7 @@ const MarqueeCard = ({
     <Link
       href={contentLink}
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-3",
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-2",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -101,7 +93,7 @@ const MarqueeCard = ({
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
+    <div className="relative flex -z-10 -mt-6 h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((content) => (
           <MarqueeCard key={content.contentName} {...content} />

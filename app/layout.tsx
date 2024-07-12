@@ -51,11 +51,11 @@ export const metadata: Metadata = {
     title: "elorm ⚡ dev ",
     description: "hey, elorm is awesome! - super creative 👺 frontend dev",
     creator: "@elorm_elom",
-    images: ["https://elorm.vercel.app/elorm-logo/default.png"],
+    images: ["https://elorm.vercel.app/elorm_og.png"],
   },
 
   openGraph: {
-    images: "https://elorm.vercel.app/elorm-logo/default.png",
+    images: "https://elorm.vercel.app/elorm_og.png",
     title: "elorm ⚡ dev ",
     description: "hey, elorm is awesome! - super creative 👺 frontend dev",
   },
@@ -78,7 +78,7 @@ export default function RootLayout({
         </head>
         <body
           className={cn(
-            " text-[14px] lg:text-[15.5px] antialiased  font-sans",
+            " text-[14px] lg:text-[15.5px] antialiased font-sans",
             fontSans.variable
           )}
         >

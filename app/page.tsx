@@ -25,11 +25,14 @@ export default function Home() {
             </h1>
 
             <p className="  mt-4">
-              Hey there, it&#39;s Prince Elorm, or just elorm if you&#39;re
-              feeling chill. Friends like to spice things up and call me Kev!
-              I&#39;m a creative soul diving headfirst into all the cool stuff
-              that catches my eye – code, music, drawing, writing – you name it!
-              🎨🎶✨
+              Hey there, it&#39;s elorm. I&#39;m a creative soul diving
+              headfirst into all the cool stuff that catches my eye – code,
+              music, drawing, writing – you name it! ✨
+              <span>
+                <br />
+                also a 10x certified youtube university frontend engineer, trust
+                me bro :)
+              </span>
             </p>
 
             <div>
@@ -111,7 +114,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div></div>
                 {/* {featuredContent.map((content) => {
                   return (
                     <div
@@ -149,9 +151,9 @@ export default function Home() {
               </>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-1">
               <Link href="/projects" className="underline">
-                check out some of my other projects
+                check out all of my projects
               </Link>
             </div>
           </div>
