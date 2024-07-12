@@ -1,11 +1,10 @@
-import { buttonVariants } from "@/components/ui/button";
-import { HeartFilledIcon } from "@radix-ui/react-icons";
 import { CircleDot, Hand, IceCream } from "lucide-react";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
 import { featuredContent } from "@/lib/content";
 import { getCategorizedBlogs } from "@/lib/articles";
 import BlogList from "@/components/blog-list";
+import { MarqueeDemo } from "@/components/marquee-component";
 
 export default function Home() {
   const blogs = getCategorizedBlogs();
@@ -113,7 +112,7 @@ export default function Home() {
                 </div>
 
                 <div></div>
-                {featuredContent.map((content) => {
+                {/* {featuredContent.map((content) => {
                   return (
                     <div
                       className="shadow-md mt-5  bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  p-4 rounded-md lg:flex lg:flex-row"
@@ -144,7 +143,9 @@ export default function Home() {
                       </div>
                     </div>
                   );
-                })}
+                })} */}
+
+                <MarqueeDemo />
               </>
             </div>
 

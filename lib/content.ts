@@ -18,7 +18,7 @@ export const featuredContent: contentType = [
   {
     id: 2,
     contentName: "Talkee.app",
-    contentLink: "https://talkeeapp.netlify.app/",
+    contentLink: "https://talkeeapp.netlify.app",
     contentDescription:
       "Talkee is a platform where users can freely share their thoughts and ideas anonymously with others in a social setting.",
     isLive: true,
@@ -28,7 +28,7 @@ export const featuredContent: contentType = [
     contentName: "reuseonline",
     contentDescription:
       "A custom React hook designed to monitor the online status of a user's device.",
-    contentLink: "http://reuseonline.vercel.app",
+    contentLink: "https://reuseonline.vercel.app",
     isLive: true,
   },
   {
@@ -36,7 +36,7 @@ export const featuredContent: contentType = [
     contentName: "Kira chat",
     contentDescription:
       "Kira is an integration of ChatGPT on WhatsApp for conversational interactions.",
-    contentLink: "https://kira-ai.vercel.app/",
+    contentLink: "https://kira-ai.vercel.app",
     isLive: false,
   },
 ];
