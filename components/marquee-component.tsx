@@ -93,7 +93,7 @@ const MarqueeCard = ({
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex  -mt-1 h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
+    <div className="relative flex  -mt-1 h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background dark:md:shadow-xl">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((content) => (
           <MarqueeCard key={content.contentName} {...content} />
