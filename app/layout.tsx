@@ -8,6 +8,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Link } from "next-view-transitions";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -92,7 +93,7 @@ export default function RootLayout({
             {/* <PendingUI /> */}
             {children}
 
-            <footer className="border-t mt-10  bg-gradient-to-b  backdrop-blur-2xl bg-cyan-800/10  p-4">
+            <footer className="border-t mt-10      p-4">
               <div className="text-sm  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
                 <h1>&copy; 2024, elorm.tsx</h1>
                 <p>Develps Inc</p>
@@ -114,18 +115,14 @@ export default function RootLayout({
                   </Link>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex items-center gap-4 mt-3">
                   <Link href={"https://github.com/Akarikev"}>
-                    <GitHubLogoIcon className="w-6 h-6 mt-3 " />
+                    <GitHubLogoIcon className="w-6 h-6  " />
                   </Link>
 
-                  <Image
-                    src={"/elorm-logo/vector/default-monochrome-white.svg"}
-                    width={90}
-                    height={90}
-                    alt="elorm-logo"
-                    className=" w-12 h-12  "
-                  />
+                  <Badge variant={"default"} className="text-xs">
+                    elorm.tsx
+                  </Badge>
                 </div>
               </div>
             </footer>

@@ -73,7 +73,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
 
   // const htmlContent = MarkdownPreview({ content: blogData.matterRes });
   return (
-    <section className="flex  min-h-screen flex-col mt-16 px-4 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40">
+    <section className="flex  min-h-screen flex-col mt-16 px-4 md:p-10  md:px-32 md:mx-10 lg:mx-40">
       <Link
         href={"/blog"}
         className="inline-flex gap-2 items-center group hover:underline"

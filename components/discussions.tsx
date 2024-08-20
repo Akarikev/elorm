@@ -16,7 +16,7 @@ function Discussions() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="bottom"
-        theme="transparent_dark"
+        theme="preferred_color_scheme"
         lang="en"
         term="what you think?"
         loading="lazy"
