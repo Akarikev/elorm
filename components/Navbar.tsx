@@ -70,7 +70,7 @@ function Navbar() {
   return (
     <div className="transition-all ">
       <div className="font-bold mt-3">
-        <h1 className="px-6 tracking-tighter font-extrabold  lg:px-40 md:px-32  md:mx-10 lg:mx-40 mt-5 mb-3 text-xl lg:text-3xl md:text-2xl">
+        <h1 className="px-6 tracking-tighter font-extrabold  md:px-32  md:mx-10 lg:mx-40 mt-5 mb-3 text-xl lg:text-3xl md:text-2xl">
           elorm.tsx
         </h1>
         {/* <Image
@@ -82,7 +82,7 @@ function Navbar() {
         /> */}
       </div>
 
-      <nav className="overflow-hidden  px-6 md:p-10 lg:px-40 md:px-32 h-11 md:mx-10 lg:mx-40">
+      <nav className="overflow-hidden  px-6 md:p-10  md:px-32 h-11 md:mx-10 lg:mx-40">
         <div className="flex flex-grow items-center pt-3 gap-1 ">
           {links.map((link) => (
             <div key={link.linkId}>

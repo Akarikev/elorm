@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen ">
       <main className="flex antialiased  flex-col  ">
-        <div className="px-6 md:p-10 lg:px-40 md:px-32 md:mx-10 lg:mx-40 ">
+        <div className="px-6 md:p-10 md:px-32 md:mx-10 lg:mx-40 ">
           <div className="border px-2 mt-3  w-fit rounded-sm  gap-x-1  inline-flex cursor-pointer   items-center">
             <Hand className="text-green-400 font-bold animate-pulse w-4 h-4" />
             <p className="text-green-400 tracking-tight text-center ">HEY!</p>

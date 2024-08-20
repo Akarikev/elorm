@@ -94,7 +94,7 @@ export default function RootLayout({
             {children}
 
             <footer className="border-t mt-10      p-4">
-              <div className="text-sm  lg:px-40 md:px-32 md:mx-10 lg:mx-40">
+              <div className="text-sm   md:px-32 md:mx-10 lg:mx-40">
                 <h1>&copy; 2024, elorm.tsx</h1>
                 <p>Develps Inc</p>
                 <p>proudly Ghanaian(❁´◡`❁)</p>
