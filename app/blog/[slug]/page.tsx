@@ -1,9 +1,10 @@
 import { Link } from "next-view-transitions";
 import { getBlogData } from "@/lib/articles";
-import { Metadata } from "next";
+
 import { getSortedBlog } from "@/lib/articles";
 import { ArrowLeftIcon } from "lucide-react";
 import MarkdownPreview from "@/components/markdown/markdown-preview";
+import Discussions from "@/components/discussions";
 
 export const dynamic = "force-dynamic";
 export async function generateStaticParams({
@@ -103,6 +104,10 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           content={blogData.contentHTML}
         />
       </div>
+
+      {/* Giscus */}
+
+      <Discussions />
 
       <Link
         href={"/blog"}
