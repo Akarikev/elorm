@@ -71,14 +71,13 @@ function ChatBox({
           ))}
         </CardContent>
         <CardFooter>
-          <div className="flex w-full items-center space-x-2 mt-4">
+          <div className="flex w-full items-center space-x-2">
             <Input
               placeholder="sup buddy?"
               className="flex-1"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
               ref={inputRef}
-              onFocus={() => inputRef.current?.focus()}
             />
             <Button
               size="icon"
