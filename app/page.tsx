@@ -5,11 +5,12 @@ import { featuredContent } from "@/lib/content";
 import { getCategorizedBlogs } from "@/lib/articles";
 import BlogList from "@/components/blog-list";
 import { MarqueeDemo } from "@/components/marquee-component";
+import ElormAi from "@/components/elorm-ai";
 
 export default function Home() {
   const blogs = getCategorizedBlogs();
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <main className="flex antialiased  flex-col  ">
         <div className="px-6 md:p-10 md:px-32 md:mx-10 lg:mx-40 ">
           <div className="border px-2 mt-3  w-fit rounded-sm  gap-x-1  inline-flex cursor-pointer   items-center">

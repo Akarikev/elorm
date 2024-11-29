@@ -59,7 +59,7 @@ function page() {
               >
                 tailwind,
               </Link>
-              <span></span> :) i mean everyone loves tailwind
+              <span></span> :) i mean everyone loves tailwindcss
             </div>
           </div>
 

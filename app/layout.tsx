@@ -9,6 +9,7 @@ import { Link } from "next-view-transitions";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import ElormAi from "@/components/elorm-ai";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -52,11 +53,11 @@ export const metadata: Metadata = {
     title: "elorm ⚡ dev ",
     description: "hey, elorm is awesome! - super creative 👺 frontend dev",
     creator: "@elorm_elom",
-    images: ["https://elorm.vercel.app/elorm_og.png"],
+    images: ["https://elorm.site/elorm_og.png"],
   },
 
   openGraph: {
-    images: "https://elorm.vercel.app/elorm_og.png",
+    images: "https://elorm.site/elorm_og.png",
     title: "elorm ⚡ dev ",
     description: "hey, elorm is awesome! - super creative 👺 frontend dev",
   },
@@ -79,7 +80,7 @@ export default function RootLayout({
         </head>
         <body
           className={cn(
-            " text-[14px] lg:text-[15.5px] antialiased font-sans",
+            " text-[14px] lg:text-[15.5px] antialiased font-sans relative",
             fontSans.variable
           )}
         >
@@ -90,9 +91,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
+
             {/* <PendingUI /> */}
             {children}
-
+            <ElormAi />
             <footer className="border-t mt-10      p-4">
               <div className="text-sm   md:px-32 md:mx-10 lg:mx-40">
                 <h1>&copy; 2024, elorm.tsx</h1>
