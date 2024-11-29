@@ -10,54 +10,24 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { config } from "@/utils/gemini-ai";
 import MarkdownPreview from "./markdown/markdown-preview";
 
-function ElormAi() {
-  const [userInput, setUserInput] = useState("hello");
-  const [messages, setMessages] = useState([
-    {
-      role: "agent",
-      content: "Hi, buddy sup?",
-    },
-  ]);
-  const [showChatMenu, setShowChatMenu] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
-
-  const inputRef = useRef<HTMLInputElement | null>(null);
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    const trimmedInput = userInput.trim();
-    if (!trimmedInput) return;
-    // Append user message
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "user",
-        content: trimmedInput,
-      },
-    ]);
-    setUserInput("");
-    setIsTyping(true);
-    try {
-      const response = await config(trimmedInput);
-      const content = response || "Sorry, something went wrong.";
-
-      // Append AI response
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "agent",
-          content,
-        },
-      ]);
-    } catch (error) {
-      console.error("Error fetching AI response:", error);
-    } finally {
-      setIsTyping(false);
-      inputRef.current?.focus();
-    }
-  };
-
-  const ChatBox = () => (
+function ChatBox({
+  messages,
+  userInput,
+  setUserInput,
+  isTyping,
+  handleSubmit,
+  inputRef,
+  showChatMenu,
+}: {
+  messages: { role: string; content: string }[];
+  userInput: string;
+  setUserInput: React.Dispatch<React.SetStateAction<string>>;
+  isTyping: boolean;
+  handleSubmit: (event: React.FormEvent) => void;
+  inputRef: React.RefObject<HTMLInputElement>;
+  showChatMenu: boolean;
+}) {
+  return (
     <div
       className={cn(
         "fixed bottom-16 right-4 md:right-8 md:bottom-20 w-full max-w-sm md:max-w-lg bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden z-50 transition-transform",
@@ -96,8 +66,6 @@ function ElormAi() {
                   : "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-white"
               )}
             >
-              {/* <Markdown>{message.content}</Markdown> */}
-
               <MarkdownPreview content={message.content} />
             </div>
           ))}
@@ -108,11 +76,9 @@ function ElormAi() {
               placeholder="sup buddy?"
               className="flex-1"
               value={userInput}
-              onChange={(e) => {
-                setUserInput(e.target.value);
-              }}
+              onChange={(e) => setUserInput(e.target.value)}
               ref={inputRef}
-              onFocus={() => setShowChatMenu(true)}
+              onFocus={() => inputRef.current?.focus()}
             />
             <Button
               size="icon"
@@ -127,10 +93,65 @@ function ElormAi() {
       </Card>
     </div>
   );
+}
+
+function ElormAi() {
+  const [userInput, setUserInput] = useState("");
+  const [messages, setMessages] = useState([
+    {
+      role: "agent",
+      content: "Hi, buddy sup?",
+    },
+  ]);
+  const [showChatMenu, setShowChatMenu] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
+
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    const trimmedInput = userInput.trim();
+    if (!trimmedInput) return;
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "user",
+        content: trimmedInput,
+      },
+    ]);
+    setUserInput("");
+    setIsTyping(true);
+    try {
+      const response = await config(trimmedInput);
+      const content = response || "Sorry, something went wrong.";
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "agent",
+          content,
+        },
+      ]);
+    } catch (error) {
+      console.error("Error fetching AI response:", error);
+    } finally {
+      setIsTyping(false);
+      inputRef.current?.focus();
+    }
+  };
 
   return (
     <div>
-      <ChatBox />
+      <ChatBox
+        messages={messages}
+        userInput={userInput}
+        setUserInput={setUserInput}
+        isTyping={isTyping}
+        handleSubmit={handleSubmit}
+        inputRef={inputRef}
+        showChatMenu={showChatMenu}
+      />
       <div
         className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50"
         onClick={() => setShowChatMenu((prev) => !prev)}
