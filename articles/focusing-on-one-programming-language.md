@@ -49,7 +49,7 @@ The point is _learning doesn't stop_. You keep learning and progressing. Even th
 
 Remember, coding is something that should be _repetitive_. Don't rush it; take your time.
 
-You can also check [candies](https://www.elorm.site/candies), where I've listed some tools and amazing people I learned from and am still learning from to get started.
+You can also check [candies](https://www.elorm.xyz/candies), where I've listed some tools and amazing people I learned from and am still learning from to get started.
 
 **_Note: Do not be scared to ask for help or ask questions. Learning is always about asking questions._**
 

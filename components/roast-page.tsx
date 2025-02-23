@@ -115,7 +115,7 @@ function RoastPage(): JSX.Element {
                   <p className="text-[7.5px] dark:text-black font-bold">
                     Generate your own roast @{" "}
                     <span className="underline underline-offset-2">
-                      elorm.site/roaastme
+                      elorm.xyz/roaastme
                     </span>
                     ✨
                   </p>

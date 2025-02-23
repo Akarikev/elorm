@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     title: "roaast me 💀 by elorm ",
     description: "get roaaasted - no hard feelings! generate your roast",
     creator: "@elorm_elom",
-    images: ["https://elorm.site/roast_og.png"],
+    images: ["https://elorm.xyz/roast_og.png"],
   },
 
   openGraph: {
-    images: "https://elorm.site/roast_og.png",
+    images: "https://elorm.xyz/roast_og.png",
     title: "roaast me 💀 by elorm",
     description: "get roaaasted - no hard feelings! generate your roast",
   },

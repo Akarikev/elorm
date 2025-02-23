@@ -38,10 +38,10 @@ export async function generateMetadata({
 
     openGraph: {
       title: `${getBlogsData.title} | elorm's Blog`,
-      url: `https://www.elorm.site/blog/${getBlogsData.id}`,
+      url: `https://www.elorm.xyz/blog/${getBlogsData.id}`,
       siteName: `${getBlogsData.title} | elorm`,
       description: getBlogsData.description,
-      images: `https://www.elorm.site/${getBlogsData.image}`,
+      images: `https://www.elorm.xyz/${getBlogsData.image}`,
       type: "website",
     },
 
@@ -50,7 +50,7 @@ export async function generateMetadata({
       title: `${getBlogsData.title} | elorm's Blog`,
       description: getBlogsData.description,
       creator: "@elorm_elom",
-      images: [`https://www.elorm.site/${getBlogsData.image}`],
+      images: [`https://www.elorm.xyz/${getBlogsData.image}`],
     },
 
     keywords: [
