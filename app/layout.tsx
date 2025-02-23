@@ -104,7 +104,7 @@ export default function RootLayout({
                 <p>proudly Ghanaian(❁´◡`❁)</p>
                 <p>All rights reserved</p>
                 <p className="text-green-500 font-bold rounded-lg  w-fit ">
-                  version 1.1.0
+                  version 1.1.1a(rose🌹)
                 </p>
 
                 <p>{"/|/."}</p>
