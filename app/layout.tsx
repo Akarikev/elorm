@@ -45,19 +45,21 @@ export const metadata: Metadata = {
     "hire web developer",
     "frontend developer",
     "prince elorm developer",
+    "elorm's site",
     "web developer portfolio",
     "elorm developer",
+    "elorm dev",
   ],
   twitter: {
     card: "summary_large_image",
     title: "elorm ⚡ dev ",
     description: "hey, elorm is awesome! - super creative 👺 frontend dev",
     creator: "@elorm_elom",
-    images: ["https://elorm.site/elorm_og.png"],
+    images: ["https://elorm.xyz/elorm_og.png"],
   },
 
   openGraph: {
-    images: "https://elorm.site/elorm_og.png",
+    images: "https://elorm.xyz/elorm_og.png",
     title: "elorm ⚡ dev ",
     description: "hey, elorm is awesome! - super creative 👺 frontend dev",
   },
