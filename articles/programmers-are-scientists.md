@@ -2,7 +2,7 @@
 id: "programmers-are-scientist"
 title: "Programmers are Scientists Too!"
 description: "Exploring how programmers embody scientific principles in problem-solving and innovation."
-category: "Me"
+category: "Tech"
 date: "02-07-2024"
 image: "elorm's programmers are scientist too.png"
 ---

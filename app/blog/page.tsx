@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: "Blog by Prince Elorm",
   description:
     "Read insightful articles about web development, programming languages, coding habits, and tech insights by Prince Elorm. Learn React, Next.js, JavaScript, and modern development practices.",
-
   openGraph: {
     title: "Blog by Prince Elorm",
     description:
@@ -22,7 +21,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Blog by Prince Elorm",
@@ -32,7 +30,6 @@ export const metadata: Metadata = {
       "/api/og?title=Blog by Prince Elorm&description=Web Development Articles&type=blog",
     ],
   },
-
   keywords: [
     "Prince Elorm blog",
     "Web development blog",
@@ -54,15 +51,26 @@ export const metadata: Metadata = {
 function page() {
   const blogs = getCategorizedBlogs();
 
-  // console.log(blogs);
   return (
-    <div className=" flex flex-col min-h-screen mt-8 px-6 md:p-10  md:px-32 md:mx-10 lg:mx-40">
-      <div>
+    <div className="flex flex-col min-h-screen px-4 md:px-10 lg:px-40 bg-muted/50">
+      {/* Page Header */}
+      <header className="w-full max-w-4xl mx-auto pt-16 pb-8 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-3 font-mono">
+          Blog
+        </h1>
+        <p className="text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
+          Insightful articles on web development, programming, and tech by
+          Prince Elorm. Minimal, modern, and easy to read.
+        </p>
+      </header>
+
+      {/* Blog Lists */}
+      <main className="w-full max-w-5xl mx-auto flex-1 space-y-12 pb-16">
         {blogs !== null &&
           Object.keys(blogs).map((blog) => (
             <BlogList category={blog} blogs={blogs[blog]} key={blog} />
           ))}
-      </div>
+      </main>
     </div>
   );
 }

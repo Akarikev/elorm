@@ -1,7 +1,7 @@
 ---
 id: "how-to-build-a-basic-react-todo-app"
 title: "how to build a basic react todo app "
-category: "Me"
+category: "Tech"
 description: "learn to build a basic todo app using reactjs"
 date: "03-06-2024"
 image: "react-app.png"

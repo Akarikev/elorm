@@ -1,7 +1,7 @@
 ---
 id: "making-coding-a-daily-habit"
 title: "MAKING CODING A DAILY HABIT 👩‍💻"
-category: "Me"
+category: "Tech"
 date: "02-05-2024"
 ---
 
