@@ -6,28 +6,48 @@ import { Link } from "next-view-transitions";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "elorm 🍬 candies",
-  description: "hey, elorm is sharing some candies - 🍬",
+  title: "Candies by Prince Elorm",
+  description:
+    "Discover awesome music recommendations, creative tools, and inspiring individuals curated by Prince Elorm. A collection of digital treasures and creative discoveries.",
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+  openGraph: {
+    title: "Candies by Prince Elorm",
+    description:
+      "Discover awesome music recommendations, creative tools, and inspiring individuals curated by Prince Elorm. A collection of digital treasures and creative discoveries.",
+    url: "https://elorm.xyz/candies",
+    images: [
+      {
+        url: "/api/og?title=Candies by Prince Elorm&description=Creative Discoveries & Recommendations&type=default",
+        width: 1200,
+        height: 630,
+        alt: "Candies by Prince Elorm - Creative Discoveries",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "elorm ⚡ candies ",
-    description: "hey, elorm is sharing some candies - 🍬 ",
+    title: "Candies by Prince Elorm",
+    description:
+      "Discover awesome music recommendations, creative tools, and inspiring individuals curated by Prince Elorm.",
     creator: "@elorm_elom",
-    images: ["https://elorm.site/candies_OG.png"],
+    site: "@elorm_elom",
+    images: [
+      "/api/og?title=Candies by Prince Elorm&description=Creative Discoveries & Recommendations&type=default",
+    ],
   },
 
-  openGraph: {
-    images: "https://elorm.site/candies_OG.png",
-    title: "elorm ⚡ candies ",
-    description: "hey, elorm is sharing some candies - 🍬",
-  },
+  keywords: [
+    "Prince Elorm candies",
+    "Music recommendations",
+    "Creative tools",
+    "Developer recommendations",
+    "Music discovery",
+    "Creative inspiration",
+    "Curated content",
+    "Digital treasures",
+    "Creative discoveries",
+  ],
 };
 
 function page() {

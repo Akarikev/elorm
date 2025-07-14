@@ -6,28 +6,21 @@ import { ArrowLeftIcon } from "lucide-react";
 import MarkdownPreview from "@/components/markdown/markdown-preview";
 import Discussions from "@/components/discussions";
 
+type PageProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export const dynamic = "force-dynamic";
-export async function generateStaticParams({
-  params,
-}: {
-  params: {
-    slug: string;
-  };
-}) {
+export async function generateStaticParams() {
   const articles = getSortedBlog();
   return articles.map((article) => ({
     slug: article.id,
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: {
-    slug: string;
-  };
-}) {
-  const getBlogsData = await getBlogData(params.slug);
+export async function generateMetadata({ params }: PageProps) {
+  const resolvedParams = await params;
+  const getBlogsData = await getBlogData(resolvedParams.slug);
 
   return {
     title: `${getBlogsData.title} | elorm's Blog`,
@@ -38,11 +31,24 @@ export async function generateMetadata({
 
     openGraph: {
       title: `${getBlogsData.title} | elorm's Blog`,
-      url: `https://www.elorm.xyz/blog/${getBlogsData.id}`,
-      siteName: `${getBlogsData.title} | elorm`,
+      url: `https://elorm.xyz/blog/${getBlogsData.id}`,
+      siteName: "elorm.tsx",
       description: getBlogsData.description,
-      images: `https://www.elorm.xyz/${getBlogsData.image}`,
-      type: "website",
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(
+            getBlogsData.title
+          )}&description=${encodeURIComponent(
+            getBlogsData.description
+          )}&type=blog`,
+          width: 1200,
+          height: 630,
+          alt: `${getBlogsData.title} - Article by Prince Elorm`,
+        },
+      ],
+      type: "article",
+      publishedTime: getBlogsData.date.toString(),
+      authors: ["Prince Elorm"],
     },
 
     twitter: {
@@ -50,7 +56,14 @@ export async function generateMetadata({
       title: `${getBlogsData.title} | elorm's Blog`,
       description: getBlogsData.description,
       creator: "@elorm_elom",
-      images: [`https://www.elorm.xyz/${getBlogsData.image}`],
+      site: "@elorm_elom",
+      images: [
+        `/api/og?title=${encodeURIComponent(
+          getBlogsData.title
+        )}&description=${encodeURIComponent(
+          getBlogsData.description
+        )}&type=blog`,
+      ],
     },
 
     keywords: [
@@ -68,8 +81,9 @@ export async function generateMetadata({
   };
 }
 
-const Blog = async ({ params }: { params: { slug: string } }) => {
-  const blogData = await getBlogData(params.slug);
+const Blog = async ({ params }: PageProps) => {
+  const resolvedParams = await params;
+  const blogData = await getBlogData(resolvedParams.slug);
 
   // const htmlContent = MarkdownPreview({ content: blogData.matterRes });
   return (

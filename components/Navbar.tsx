@@ -8,7 +8,15 @@ import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { Book, FolderDot, Home, MailOpenIcon, UserSearch } from "lucide-react";
+import {
+  Book,
+  FolderDot,
+  Home,
+  Menu,
+  X,
+  UserSearch,
+  ExternalLink,
+} from "lucide-react";
 import Image from "next/image";
 import { ModeToggle } from "@/components/ui/theme-toggler";
 
@@ -18,12 +26,20 @@ type LinkType = {
   linkId: any;
   linkName: string;
   linkPath: string;
-  isSelected?: boolean; // Fix the type here
+  isSelected?: boolean;
   Icon: any;
+  colorScheme: {
+    bg: string;
+    text: string;
+    border: string;
+    hoverBg: string;
+    hoverText: string;
+    hoverBorder: string;
+  };
 }[];
 
 function Navbar() {
-  // const blogD = getSortedBlog().map((blg) => blg.id);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const links: LinkType = useMemo(
@@ -34,6 +50,14 @@ function Navbar() {
         linkPath: "/",
         isSelected: pathname === "/",
         Icon: Home,
+        colorScheme: {
+          bg: "bg-blue-100 dark:bg-blue-950/20",
+          text: "text-blue-700 dark:text-blue-300",
+          border: "border-blue-200 dark:border-blue-800",
+          hoverBg: "hover:bg-blue-50 dark:hover:bg-blue-950/10",
+          hoverText: "hover:text-blue-600 dark:hover:text-blue-400",
+          hoverBorder: "hover:border-blue-200 dark:hover:border-blue-700",
+        },
       },
       {
         linkId: 2,
@@ -41,6 +65,14 @@ function Navbar() {
         linkName: "projects",
         isSelected: pathname === "/projects",
         Icon: FolderDot,
+        colorScheme: {
+          bg: "bg-green-100 dark:bg-green-950/20",
+          text: "text-green-700 dark:text-green-300",
+          border: "border-green-200 dark:border-green-800",
+          hoverBg: "hover:bg-green-50 dark:hover:bg-green-950/10",
+          hoverText: "hover:text-green-600 dark:hover:text-green-400",
+          hoverBorder: "hover:border-green-200 dark:hover:border-green-700",
+        },
       },
       {
         linkId: 3,
@@ -48,6 +80,14 @@ function Navbar() {
         linkName: "about",
         isSelected: pathname === "/about",
         Icon: UserSearch,
+        colorScheme: {
+          bg: "bg-purple-100 dark:bg-purple-950/20",
+          text: "text-purple-700 dark:text-purple-300",
+          border: "border-purple-200 dark:border-purple-800",
+          hoverBg: "hover:bg-purple-50 dark:hover:bg-purple-950/10",
+          hoverText: "hover:text-purple-600 dark:hover:text-purple-400",
+          hoverBorder: "hover:border-purple-200 dark:hover:border-purple-700",
+        },
       },
       {
         linkId: 4,
@@ -55,74 +95,141 @@ function Navbar() {
         linkName: "blog",
         isSelected: pathname === "/blog",
         Icon: Book,
+        colorScheme: {
+          bg: "bg-orange-100 dark:bg-orange-950/20",
+          text: "text-orange-700 dark:text-orange-300",
+          border: "border-orange-200 dark:border-orange-800",
+          hoverBg: "hover:bg-orange-50 dark:hover:bg-orange-950/10",
+          hoverText: "hover:text-orange-600 dark:hover:text-orange-400",
+          hoverBorder: "hover:border-orange-200 dark:hover:border-orange-700",
+        },
       },
-
-      // {
-      //   linkId: blogD,
-      //   linkName: "blog",
-      //   isSelected: pathname === `/blog/${blogD}`,
-      //   linkPath: "/blog/",
-      // },
     ],
     [pathname]
   );
 
   return (
-    <div className="transition-all ">
-      <div className="font-bold mt-3">
-        <h1 className="px-6 tracking-tighter font-extrabold  md:px-32  md:mx-10 lg:mx-40 mt-5 mb-3 text-xl lg:text-3xl md:text-2xl">
-          elorm.tsx
-        </h1>
-        {/* <Image
-          src={"/elorm-logo/vector/default.svg"}
-          width={110}
-          height={110}
-          alt="elorm-logo"
-          className="object-fit ml-9 mt-4 mb-4  lg:ml-80 md:ml-32  "
-        /> */}
-      </div>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto px-6 md:px-32 lg:px-40">
+        {/* Logo/Brand */}
+        <div className="flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="relative">
+              <span className="relative inline-block transform -rotate-1 bg-green-500 text-white px-3 py-1 border-2 border-green-600 shadow-md text-xl font-bold tracking-tight md:text-2xl font-mono">
+                <span className="relative z-10">elorm.tsx</span>
+                <div className="absolute inset-0 bg-green-400 opacity-50 transform skew-x-6"></div>
+              </span>
+            </div>
+          </Link>
 
-      <nav className="overflow-hidden  px-6 md:p-10  md:px-32 h-11 md:mx-10 lg:mx-40">
-        <div className="flex flex-grow items-center pt-3 gap-1 ">
-          {links.map((link) => (
-            <div key={link.linkId}>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-1">
+            {links.map((link) => (
               <Link
-                href={`${link.linkPath}`}
+                key={link.linkId}
+                href={link.linkPath}
                 className={cn(
-                  // buttonVariants({
-                  //   variant: "link",
-                  // }),
-                  "mr-4 text-[13px] inline-flex items-center text-center justify-center gap-1 group",
+                  "inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 border border-transparent",
                   {
-                    " hover:underline hover:": !link.isSelected,
-                    "w-fit  bg-green-900 px-1 text-white rounded-md":
+                    [`${link.colorScheme.bg} ${link.colorScheme.text} ${link.colorScheme.border} shadow-sm`]:
                       link.isSelected,
+                    [`text-muted-foreground ${link.colorScheme.hoverBg} ${link.colorScheme.hoverText} ${link.colorScheme.hoverBorder}`]:
+                      !link.isSelected,
                   }
                 )}
               >
-                <link.Icon className="w-3 h-3 flex items-center justify-center" />
+                <link.Icon className="h-4 w-4" />
                 {link.linkName}
               </Link>
+            ))}
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-2 ml-4 border-l pl-4">
+              <Link
+                href="https://twitter.com/elorm_elom"
+                className="p-2 text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/20 rounded-lg transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterLogoIcon className="h-4 w-4" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+              <Link
+                href="https://github.com/Akarikev"
+                className="p-2 text-muted-foreground hover:text-gray-600 dark:hover:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-950/20 rounded-lg transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubLogoIcon className="h-4 w-4" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <ModeToggle />
             </div>
-          ))}
+          </nav>
 
-          <Link href={"https://twitter.com/elorm_elom"}>
-            <TwitterLogoIcon className="hover:text-white w-4 h-4" />
-          </Link>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-colors"
+          >
+            {isMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+            <span className="sr-only">Toggle menu</span>
+          </button>
+        </div>
 
-          <Link href={"https://github.com/Akarikev"}>
-            <GitHubLogoIcon className="w-4 h-4 ml-2 " />
-          </Link>
-        </div>
-      </nav>
-      <div className="md:-mt-12  ">
-        <div className="">
-          <ModeToggle />
-          {/* <p className="bg-gray-300/10 absolute text-green-400  top-0 left-0 right-10 rounded-md z-10  w-fit h-fit text-center px-1  text-xs"> */}
-          {/* </p> */}
-        </div>
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t">
+            <nav className="flex flex-col space-y-2">
+              {links.map((link) => (
+                <Link
+                  key={link.linkId}
+                  href={link.linkPath}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={cn(
+                    "inline-flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg transition-all duration-200 border border-transparent",
+                    {
+                      [`${link.colorScheme.bg} ${link.colorScheme.text} ${link.colorScheme.border}`]:
+                        link.isSelected,
+                      [`text-muted-foreground ${link.colorScheme.hoverBg} ${link.colorScheme.hoverText} ${link.colorScheme.hoverBorder}`]:
+                        !link.isSelected,
+                    }
+                  )}
+                >
+                  <link.Icon className="h-4 w-4" />
+                  {link.linkName}
+                </Link>
+              ))}
+
+              {/* Mobile Social Links */}
+              <div className="flex items-center justify-center space-x-4 pt-4 border-t mt-4">
+                <Link
+                  href="https://twitter.com/elorm_elom"
+                  className="p-2 text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/20 rounded-lg transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TwitterLogoIcon className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://github.com/Akarikev"
+                  className="p-2 text-muted-foreground hover:text-gray-600 dark:hover:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-950/20 rounded-lg transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubLogoIcon className="h-5 w-5" />
+                </Link>
+                <ModeToggle />
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
-    </div>
+    </header>
   );
 }
 

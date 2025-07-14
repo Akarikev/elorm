@@ -2,45 +2,8 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { featuredContent } from "@/lib/content";
 import { Link } from "next-view-transitions";
-import { CircleDot } from "lucide-react";
-// const reviews = [
-//   {
-//     name: "Jack",
-//     username: "@jack",
-//     body: "I've never seen anything like this before. It's amazing. I love it.",
-//     img: "https://avatar.vercel.sh/jack",
-//   },
-//   {
-//     name: "Jill",
-//     username: "@jill",
-//     body: "I don't know what to say. I'm speechless. This is amazing.",
-//     img: "https://avatar.vercel.sh/jill",
-//   },
-//   {
-//     name: "John",
-//     username: "@john",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/john",
-//   },
-//   {
-//     name: "Jane",
-//     username: "@jane",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/jane",
-//   },
-//   {
-//     name: "Jenny",
-//     username: "@jenny",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/jenny",
-//   },
-//   {
-//     name: "James",
-//     username: "@james",
-//     body: "I'm at a loss for words. This is amazing. I love it.",
-//     img: "https://avatar.vercel.sh/james",
-//   },
-// ];
+import { CircleDot, ExternalLink, Star } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const firstRow = featuredContent.slice(0, featuredContent.length / 2);
 const secondRow = featuredContent.slice(featuredContent.length / 2);
@@ -57,55 +20,157 @@ const MarqueeCard = ({
   contentDescription: string;
   isLive: boolean;
 }) => {
+  const isInDevelopment =
+    contentName === "Tiny - Reminders" || contentName === "Tune Tribe";
+  const hasValidLink = !isInDevelopment;
+
+  const cardContent = (
+    <>
+      {/* Gradient overlay on hover */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+
+      <div className="relative z-10 space-y-3">
+        {/* Header */}
+        <div className="flex items-start justify-between">
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <Badge
+                variant="secondary"
+                className={cn(
+                  "text-xs font-medium",
+                  isInDevelopment
+                    ? "bg-orange-100 text-orange-700 border-orange-200 dark:bg-orange-950/20 dark:text-orange-300 dark:border-orange-800"
+                    : isLive
+                    ? "bg-green-100 text-green-700 border-green-200 dark:bg-green-950 dark:text-green-300 dark:border-green-800"
+                    : "bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-950 dark:text-yellow-300 dark:border-yellow-800"
+                )}
+              >
+                <CircleDot
+                  className={cn(
+                    "h-2 w-2 mr-1 animate-pulse",
+                    isInDevelopment
+                      ? "text-orange-500"
+                      : isLive
+                      ? "text-green-500"
+                      : "text-yellow-500"
+                  )}
+                />
+                {isInDevelopment
+                  ? "In Dev"
+                  : isLive
+                  ? "Live & Active"
+                  : "Inactive / Maintenance"}
+              </Badge>
+            </div>
+
+            <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors leading-tight">
+              {contentName}
+            </h3>
+          </div>
+
+          <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all flex-shrink-0" />
+        </div>
+
+        {/* Description */}
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 group-hover:text-foreground transition-colors">
+          {contentDescription}
+        </p>
+
+        {/* URL or Email indicator */}
+        <div className="pt-2 border-t border-border/50">
+          {hasValidLink ? (
+            <p className="text-xs text-muted-foreground font-mono truncate">
+              {new URL(contentLink).hostname}
+            </p>
+          ) : (
+            <p className="text-xs text-muted-foreground">
+              Email for exclusive access
+            </p>
+          )}
+        </div>
+
+        {/* Decorative elements */}
+        <div className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="h-2 w-2 bg-primary rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </>
+  );
+
+  if (isInDevelopment) {
+    return (
+      <Link
+        href={`mailto:princeelorm17@gmail.com?subject=Exclusive Access Request for ${contentName}&body=Hi Elorm,%0A%0AI would like to request exclusive access to ${contentName}.%0A%0AThanks!`}
+        className={cn(
+          "group relative w-80 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300 hover:scale-105",
+          // light styles
+          "border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card hover:shadow-lg hover:border-orange-400/50",
+          // dark styles
+          "dark:border-border/30 dark:bg-card/30 dark:hover:bg-card/80 dark:hover:border-orange-400/30"
+        )}
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
   return (
     <Link
       href={contentLink}
+      target="_blank"
+      rel="noopener noreferrer"
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-2",
+        "group relative w-80 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300 hover:scale-105",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card hover:shadow-lg hover:border-primary/50",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-border/30 dark:bg-card/30 dark:hover:bg-card/80 dark:hover:border-primary/30"
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        {/* <img className="rounded-full" width="32" height="32" alt="" src={img} /> */}
-        <div className="flex flex-col ">
-          <figcaption className="text-sm font-medium dark:text-white">
-            <div className="inline-flex justify-center items-center gap-3 dark:bg-gray-800/70 bg-slate-400/10 rounded-md px-1 py-0.5">
-              {isLive === true ? (
-                <CircleDot className="text-green-400 animate-pulse w-4 h-4" />
-              ) : (
-                <CircleDot className="text-yellow-200 animate-pulse w-4 h-4" />
-              )}
-              {contentName}
-            </div>
-          </figcaption>
-          <p className="text-xs underline font-medium dark:text-white/40">
-            {contentLink}
-          </p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{contentDescription}</blockquote>
+      {cardContent}
     </Link>
   );
 };
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex  -mt-1 h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background dark:md:shadow-xl">
-      <Marquee pauseOnHover className="[--duration:20s]">
+    <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-muted/20 to-background border border-border/50">
+      {/* Header */}
+      <div className="absolute top-6 left-6 right-6 z-20">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Star className="h-5 w-5 text-yellow-500" />
+            <span className="text-sm font-medium text-muted-foreground">
+              Featured Projects
+            </span>
+          </div>
+          <Badge variant="outline" className="text-xs">
+            {featuredContent.length} projects
+          </Badge>
+        </div>
+      </div>
+
+      {/* First Row */}
+      <Marquee pauseOnHover className="[--duration:25s] mb-4">
         {firstRow.map((content) => (
-          <MarqueeCard key={content.contentName} {...content} />
+          <MarqueeCard key={content.id} {...content} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+
+      {/* Second Row */}
+      <Marquee reverse pauseOnHover className="[--duration:25s]">
         {secondRow.map((content) => (
-          <MarqueeCard key={content.contentLink} {...content} />
+          <MarqueeCard key={content.id} {...content} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+
+      {/* Fade Gradients */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background via-background/80 to-transparent"></div>
+
+      {/* Top and bottom fade */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-background/80 to-transparent"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background/80 to-transparent"></div>
     </div>
   );
 }
