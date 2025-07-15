@@ -8,14 +8,6 @@ type contentType = {
 
 export const featuredContent: contentType = [
   {
-    id: 1,
-    contentName: "Bonsai",
-    contentLink: "https://www.bonsaijs.site/",
-    contentDescription:
-      "Bonsai is a flexible state management library for React applications that grows with you. It offers tree state, flat state, built-in middleware, zero dependencies, and TypeScript-first design with developer-friendly APIs and DevTools.",
-    isLive: true,
-  },
-  {
     id: 2,
     contentName: "Talkee.app",
     contentLink: "https://talkeeapp.netlify.app/",
@@ -42,6 +34,14 @@ export const featuredContent: contentType = [
 ];
 
 export const devTools: contentType = [
+  {
+    id: 1,
+    contentName: "Bonsai",
+    contentLink: "https://www.bonsaijs.site/",
+    contentDescription:
+      "Bonsai is a flexible state management library for React applications that grows with you. It offers tree state, flat state, built-in middleware, zero dependencies, and TypeScript-first design with developer-friendly APIs and DevTools.",
+    isLive: true,
+  },
   {
     id: 5,
     contentName: "reuseonline",

@@ -1,24 +1,12 @@
 "use client";
 
 import React, { useState, useTransition } from "react";
-import html2canvas from "html2canvas";
 import roasts from "@/utils/roasts";
 import { Download, FileWarning, LaughIcon, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
-import { Amatic_SC, Dosis } from "next/font/google";
 import { cn } from "@/lib/utils";
 import * as htmlToImage from "html-to-image";
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 import download from "downloadjs";
-
-const dosis = Dosis({
-  subsets: ["latin"],
-  weight: "500",
-});
-const amatic = Amatic_SC({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 function getRandomRoast(): string {
   const randomIndex = Math.floor(Math.random() * roasts.length);
@@ -37,29 +25,6 @@ function RoastPage(): JSX.Element {
   const handleDownloadImage = () => {
     startTransition(() => {
       const roastContainer = document.querySelector("#roastContainer");
-      // if (roastContainer) {
-      //   html2canvas(roastContainer as HTMLElement)
-      //     .then((canvas) => {
-      //       const link = document.createElement("a");
-      //       link.download = "roast.png";
-      //       link.href = canvas.toDataURL();
-      //       link.click();
-
-      //       // Check if the user is on iPhone/iPad
-
-      //       const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-      //       if (isIOS) {
-      //         const linkDr = (link.href = canvas.toDataURL());
-      //         window.location.href = linkDr;
-      //         alert("Long press to download");
-      //       }
-      //     })
-      //     .catch((err) => {
-      //       console.error("Error generating image:", err);
-      //     });
-      // }
-
       htmlToImage.toPng(roastContainer as HTMLElement).then(function (dataUrl) {
         download(dataUrl, `${roastee + `'s` + `_roast.png`}`);
       });
@@ -67,68 +32,78 @@ function RoastPage(): JSX.Element {
   };
 
   return (
-    <div
-      className="flex flex-col justify-center items-center space-y-3"
-      suppressHydrationWarning
-    >
-      <div className="space-y-2">
-        <h1 className="text-center uppercase font-extrabold text-3xl tracking-tight mb-4 mt-3">
-          Get <span className="text-red-400">Roasted!</span>
-        </h1>
-
-        <div className="p-4 bg-red-700/50 rounded-md space-y-2 items-center">
-          <FileWarning className="w-4 h-4 text-white " />
-          <p className="text-white">
-            If you are easily offended or sensitive to jokes, please refrain
-            from proceeding with this content.
+    <div className="flex flex-col justify-center items-center min-h-screen px-4 py-10 bg-background">
+      <div className="w-full max-w-md mx-auto space-y-8">
+        <header className="text-center mb-4">
+          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight font-mono mb-2">
+            Get <span className="text-primary">Roasted</span>
+          </h1>
+          <p className="text-muted-foreground text-base font-light max-w-xs mx-auto">
+            A playful, minimal roast generator. Enter your name (optional), get
+            a roast, and download your custom card.
           </p>
-        </div>
+        </header>
 
-        <div className="flex flex-col">
-          <small className="flex start mb-3 mt-2">
-            <p className="text-gray-500">
-              If you wanna get roasted, we might as well know your name.
-              Don&apos;t worry, it&apos;s optional.
-            </p>
-          </small>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-2 bg-muted/60 border border-border rounded-md px-4 py-3">
+            <FileWarning className="w-4 h-4 text-primary" />
+            <span className="text-xs text-muted-foreground">
+              If you are easily offended or sensitive to jokes, please refrain
+              from proceeding.
+            </span>
+          </div>
 
           <input
             type="text"
-            placeholder="name? "
+            placeholder="Your name (optional)"
             value={roastee}
             onChange={(e) => setRoastee(e.target.value)}
-            className="p-3 w-full rounded-lg bg-gray-100 dark:bg-background border-2 border-gray-300 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 ease-in-out shadow-sm hover:shadow-md outline-none mb-6"
+            className="p-3 w-full rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 shadow-sm outline-none text-base font-mono"
           />
         </div>
 
         {roast && (
-          <div className="flex flex-col items-center space-y-3 mt-4">
+          <div className="flex flex-col items-center space-y-4 mt-6">
             <div
               id="roastContainer"
               className={cn(
-                "p-3 w-[380px] h-[380px] bg-gradient-to-r from-violet-200 via-amber-100 to-pink-200 flex flex-col justify-between rounded-[2px]"
+                "p-6 w-full min-h-[320px] flex flex-col justify-between rounded-xl bg-gradient-to-br from-primary/10 via-background to-pink-100/30 shadow-md border border-border"
               )}
+              style={{
+                fontFamily:
+                  "monospace, 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace",
+              }}
             >
-              <div className="flex justify-between items-center gap-1">
-                <div className="inline-flex gap-2 items-center">
-                  <LaughIcon className="w-5 h-5 dark:text-black" />
-                  <p className="text-[7.5px] dark:text-black font-bold">
-                    Generate your own roast @{" "}
-                    <span className="underline underline-offset-2">
-                      elorm.xyz/roaastme
-                    </span>
-                    ✨
-                  </p>
+              <div className="flex justify-between items-center mb-2">
+                <div className="inline-flex gap-2 items-center text-xs text-muted-foreground">
+                  <LaughIcon className="w-4 h-4" />
+                  <span
+                    style={{
+                      fontFamily:
+                        "monospace, 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace",
+                    }}
+                  >
+                    elorm.xyz/roaastme
+                  </span>
                 </div>
-                <div>
-                  <p className="text-[7px] dark:text-black font-extrabold">
-                    {roastee ? <>{roastee}&apos;s roast</> : ""}
-                  </p>
-                </div>
+                <span
+                  className="text-[10px] font-semibold text-muted-foreground"
+                  style={{
+                    fontFamily:
+                      "monospace, 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace",
+                  }}
+                >
+                  {roastee ? `${roastee}'s roast` : ""}
+                </span>
               </div>
-
               <div className="flex flex-grow items-center justify-center">
-                <p className="font-extrabold text-xl text-zinc-800 text-center dark:text-black tracking-tight">
+                <p
+                  className="font-extrabold text-lg md:text-xl text-center text-foreground leading-snug"
+                  style={{
+                    fontFamily:
+                      "monospace, 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace",
+                  }}
+                >
                   {roastee ? `${roastee}, ${roast}` : roast}
                 </p>
               </div>
@@ -136,16 +111,17 @@ function RoastPage(): JSX.Element {
           </div>
         )}
 
-        <div className="flex space-x-2 items-center justify-center">
-          <Button onClick={handleNewRoast} size={"sm"} className="mt-4">
+        <div className="flex space-x-2 items-center justify-center mt-6">
+          <Button onClick={handleNewRoast} size="sm" className="font-mono">
             ROAAST me!
           </Button>
           {roast && (
             <Button
-              size={"sm"}
-              variant={"secondary"}
-              className="mt-4"
+              size="sm"
+              variant="outline"
+              className="font-mono"
               onClick={handleDownloadImage}
+              disabled={pending}
             >
               {pending ? (
                 <span className="gap-1 inline-flex items-center">
@@ -153,8 +129,7 @@ function RoastPage(): JSX.Element {
                 </span>
               ) : (
                 <span className="gap-1 inline-flex items-center">
-                  download your roast
-                  <Download className="w-4 h-4" />
+                  Download <Download className="w-4 h-4" />
                 </span>
               )}
             </Button>

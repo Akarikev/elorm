@@ -249,7 +249,7 @@ function page() {
               <Globe className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Web Applications
+              Web Applications & Mobile Apps
             </h2>
           </div>
 
