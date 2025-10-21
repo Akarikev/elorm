@@ -7,7 +7,7 @@ let genAI = null;
 
 async function getAI() {
   if (!API_KEY) {
-    const res = await fetch("http://localhost:3000/api/api-key");
+    const res = await fetch("api/api-key");
     API_KEY = await res.text();
     genAI = new GoogleGenAI({ apiKey: API_KEY });
   }
