@@ -4,7 +4,7 @@
       "runtime": "nodejs22.x"
     }
   },
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "buildCommand": "bun run build",
+  "devCommand": "bun run dev",
+  "installCommand": "bun install"
 }
