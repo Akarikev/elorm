@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@giscus/react": "^3.0.0",
+    "@google/genai": "^1.25.0",
     "@google/generative-ai": "^0.21.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",

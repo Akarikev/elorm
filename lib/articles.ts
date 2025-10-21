@@ -13,7 +13,6 @@ export const getSortedBlog = (): blogItemType[] => {
 
   const allBlogs = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
-
     const fullPath = path.join(blogDir, fileName);
 
     const fileContent = fs.readFileSync(fullPath, "utf-8");
@@ -68,6 +67,7 @@ export const getBlogData = async (id: string) => {
   //   .process(matterRes.content);
 
   const contentHTML = matterRes.content.toString();
+
 
   return {
     id,
