@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { config } from "@/utils/gemini-ai";
+import { configStream } from "@/utils/gemini-ai";
 import MarkdownPreview from "./markdown/markdown-preview";
 
 function ChatBox({
@@ -27,6 +27,13 @@ function ChatBox({
   inputRef: React.RefObject<HTMLInputElement>;
   showChatMenu: boolean;
 }) {
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
     <div
       className={cn(
@@ -50,7 +57,7 @@ function ChatBox({
                 elorm&apos;s AI buddy
               </p>
               <p className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse inline-block"></span>
                 Online & ready to chat!
               </p>
               {isTyping && (
@@ -73,9 +80,27 @@ function ChatBox({
                   : "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-white"
               )}
             >
-              <MarkdownPreview content={message.content} />
+              {message.content ? (
+                <MarkdownPreview content={message.content} />
+              ) : (
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                    <div
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                      style={{ animationDelay: "0.1s" }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
+                  </div>
+                  <span className="text-xs">AI is thinking...</span>
+                </div>
+              )}
             </div>
           ))}
+          <div ref={messagesEndRef} />
         </CardContent>
         <CardFooter className="bg-white dark:bg-gray-800 border-t border-border/50 p-3">
           <div className="flex w-full items-center space-x-2">
@@ -132,30 +157,50 @@ function ElormAi() {
     const trimmedInput = userInput.trim();
     if (!trimmedInput) return;
 
+    // Add user message and empty agent message at the same time
     setMessages((prev) => [
       ...prev,
       {
         role: "user",
         content: trimmedInput,
       },
+      {
+        role: "agent",
+        content: "",
+      },
     ]);
     setUserInput("");
     setIsTyping(true);
-    try {
-      const response = await config(trimmedInput);
-      const content = response || "Sorry, something went wrong.";
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "agent",
-          content,
-        },
-      ]);
+    try {
+      let streamedContent = "";
+
+      await configStream(trimmedInput, (chunk: string) => {
+        streamedContent += chunk;
+        setMessages((prev) => {
+          const newMessages = [...prev];
+          // Update the last message (which is the agent message)
+          newMessages[newMessages.length - 1] = {
+            role: "agent",
+            content: streamedContent,
+          };
+          return newMessages;
+        });
+      });
+
+      setIsTyping(false);
     } catch (error) {
       console.error("Error fetching AI response:", error);
-    } finally {
+      setMessages((prev) => {
+        const newMessages = [...prev];
+        newMessages[newMessages.length - 1] = {
+          role: "agent",
+          content: "Sorry, something went wrong. Please try again! 😅",
+        };
+        return newMessages;
+      });
       setIsTyping(false);
+    } finally {
       inputRef.current?.focus();
     }
   };

@@ -166,7 +166,7 @@ export default function RootLayout({
 
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <head>
           <script
             type="application/ld+json"
@@ -177,7 +177,7 @@ export default function RootLayout({
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
             geistSans.variable,
-            geistMono.variable,
+            geistMono.variable
           )}
         >
           <ThemeProvider
