@@ -1,10 +1,6 @@
 {
-  "functions": {
-    "app/api/**/*.js": {
-      "runtime": "nodejs22.x"
-    }
-  },
   "buildCommand": "bun run build",
   "devCommand": "bun run dev",
-  "installCommand": "bun install"
+  "installCommand": "bun install",
+  "framework": "nextjs"
 }
