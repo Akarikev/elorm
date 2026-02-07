@@ -19,6 +19,11 @@ import {
   Leaf,
   ExternalLink,
 } from "lucide-react";
+// Compute the current year at runtime. Using a constant here ensures
+// that the copyright automatically updates each year without manual
+// intervention. This avoids hard‑coding a specific year in the footer.
+const currentYear = new Date().getFullYear();
+
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -306,7 +311,7 @@ export default function RootLayout({
                 <div className="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
                   <div className="text-sm text-muted-foreground">
                     <p className="flex items-center gap-2">
-                      &copy; 2025 Develps Inc. All rights reserved.
+                      &c&copy; {currentYear} Develps Inc. All rights reserved.
                       <span className="inline-flex items-center gap-1">
                         Made with{" "}
                         <Heart
