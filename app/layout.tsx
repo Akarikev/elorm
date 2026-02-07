@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     template: "%s | elorm.tsx",
   },
   description:
-    "Prince Elorm - Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+    "elorm - Creative Software Engineer, it feels good when the code works! 😭",
 
   icons: {
     icon: "/favicon.ico",
@@ -57,12 +57,12 @@ export const metadata: Metadata = {
   },
 
   applicationName: "elorm.tsx Portfolio",
-  authors: [{ name: "Prince Elorm", url: "https://elorm.xyz" }],
-  creator: "Prince Elorm",
-  publisher: "Prince Elorm",
+  authors: [{ name: "Prince D. Elorm", url: "https://elorm.xyz" }],
+  creator: "Prince D. Elorm",
+  publisher: "Prince D. Elorm",
 
   keywords: [
-    "Prince Elorm",
+    "Prince D. Elorm",
     "elorm.tsx",
     "software engineer",
     "software engineer",
@@ -92,14 +92,12 @@ export const metadata: Metadata = {
     url: "https://elorm.xyz",
     title: "elorm.tsx - Creative Software Engineer",
     description:
-      "Prince Elorm - Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
-    siteName: "elorm.tsx",
+      "elorm - Creative Software Engineer, it feels good when the code works! 😭",
+    siteName: "elorm",
     images: [
       {
-        url: "/api/og?title=elorm.tsx&description=Creative Software Engineer&type=default",
-        width: 1200,
-        height: 630,
-        alt: "elorm.tsx - Creative Software Engineer",
+        url: "/og-image.png", 
+        alt: "elorm - Creative Software Engineer",
       },
     ],
   },
@@ -108,12 +106,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "elorm.tsx - Creative Software Engineer",
     description:
-      "Prince Elorm - Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+      "elorm - Creative Software Engineer, it feels good when the code works! 😭",
     creator: "@elorm_elom",
     site: "@elorm_elom",
-    images: [
-      "/api/og?title=elorm.tsx&description=Creative Software Engineer&type=default",
-    ],
+    images: ["/og-image.png"],
   },
 
   robots: {
@@ -142,7 +138,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Prince Elorm",
+    name: "Prince D. Elorm",
     alternateName: "elorm.tsx",
     url: "https://elorm.xyz",
     image: "https://elorm.xyz/guy.webp",
@@ -155,7 +151,7 @@ export default function RootLayout({
     worksFor: {
       "@type": "Organization",
       name: "All Labs",
-      url: "https://all-labs.com",
+      url: "https://africanlanguageslab.com",
     },
     alumniOf: {
       "@type": "Country",
@@ -172,7 +168,7 @@ export default function RootLayout({
       "Machine Learning",
     ],
     description:
-      "Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+      "Creative Software Engineer, it feels good when the code works! 😭",
   };
 
   return (
