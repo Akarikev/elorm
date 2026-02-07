@@ -4,6 +4,7 @@ import { getSortedBlog } from "@/lib/articles";
 import { ArrowLeftIcon } from "lucide-react";
 import MarkdownPreview from "@/components/markdown/markdown-preview";
 import Discussions from "@/components/discussions";
+import { ShareButton } from "@/components/ui/share-button";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -98,6 +99,15 @@ const Blog = async ({ params }: PageProps) => {
           </Link>
         </div>
 
+          {/* Share Button (Top) */}
+        <div className="max-w-3xl -mt-10 mx-auto mb-10 flex justify-end">
+           <ShareButton 
+             title={blogData.title}
+             url={`https://elorm.xyz/blog/${blogData.id}`}
+             description={blogData.description}
+           />
+        </div>
+
         {/* Blog Header */}
         <header className="max-w-3xl mx-auto mb-16 text-center md:text-left">
            <div className="flex items-center gap-3 text-sm text-muted-foreground font-mono mb-6 justify-center md:justify-start">
@@ -123,12 +133,26 @@ const Blog = async ({ params }: PageProps) => {
           </h1>
         </header>
 
+      
+
         {/* Blog Content */}
         <div className="max-w-3xl mx-auto">
           <MarkdownPreview
             className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:font-medium prose-p:leading-relaxed prose-img:rounded-sm prose-a:text-primary prose-a:no-underline hover:prose-a:underline max-w-none text-muted-foreground"
             content={blogData.contentHTML}
           />
+        </div>
+
+        {/* Share Button Section */}
+        <div className="max-w-3xl mx-auto mt-16 mb-8 flex items-center justify-between py-6 border-t border-border/40">
+           <div className="text-muted-foreground italic font-serif">
+              share this article
+           </div>
+           <ShareButton 
+             title={blogData.title}
+             url={`https://elorm.xyz/blog/${blogData.id}`}
+             description={blogData.description}
+           />
         </div>
 
         {/* Comments/Discussions */}
