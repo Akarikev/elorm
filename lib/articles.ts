@@ -8,7 +8,9 @@ import remarkHtml from "remark-html";
 import type { blogItemType } from "@/types";
 
 const blogDir = path.join(process.cwd(), "articles");
-export const getSortedBlog = (): blogItemType[] => {
+
+export const getSortedBlog = async (): Promise<blogItemType[]> => {
+  "use cache";
   const fileNames = fs.readdirSync(blogDir);
 
   const allBlogs = fileNames.map((fileName) => {
@@ -30,7 +32,7 @@ export const getSortedBlog = (): blogItemType[] => {
   });
 
   return allBlogs.sort((a, b) => {
-    const format = "DD-MM-YYYY";
+    const format = "MM-DD-YYYY";
     const dateOne = moment(a.date, format);
     const dateTwo = moment(b.date, format);
     if (dateOne.isBefore(dateTwo)) {
@@ -41,8 +43,9 @@ export const getSortedBlog = (): blogItemType[] => {
   });
 };
 
-export const getCategorizedBlogs = (): Record<string, blogItemType[]> => {
-  const sortedBlogs = getSortedBlog();
+export const getCategorizedBlogs = async (): Promise<Record<string, blogItemType[]>> => {
+  "use cache";
+  const sortedBlogs = await getSortedBlog();
   const categorizedBlogs: Record<string, blogItemType[]> = {};
 
   sortedBlogs.forEach((blog) => {
@@ -56,6 +59,7 @@ export const getCategorizedBlogs = (): Record<string, blogItemType[]> => {
 };
 
 export const getBlogData = async (id: string) => {
+  "use cache";
   const fullPath = path.join(blogDir, `${id}.md`);
 
   const fileContent = fs.readFileSync(fullPath, "utf-8");
@@ -76,6 +80,6 @@ export const getBlogData = async (id: string) => {
     image: matterRes.data.image,
     category: matterRes.data.category,
     description: matterRes.data.description,
-    date: moment(matterRes.data.date, "DD-MM-YYYY").format("MMMM Do YYYY"),
+    date: matterRes.data.date, // Return raw date string from frontmatter
   };
 };

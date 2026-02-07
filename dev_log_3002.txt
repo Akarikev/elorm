@@ -1,0 +1,2933 @@
+$ next dev -p "3002"
+ΓÜá `experimental.cacheComponents` has been moved to `cacheComponents`. Please update your next.config.mjs file accordingly.
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\princ\yarn.lock as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\princ\Desktop\projects\elorm\bun.lock
+
+Γû▓ Next.js 16.1.6 (Turbopack, Cache Components)
+- Local:         http://localhost:3002
+- Network:       http://10.242.236.120:3002
+- Environments: .env
+- Experiments (use with caution):
+  Γ£ô cacheComponents
+
+Γ£ô Starting...
+Γ£ô Ready in 3.9s
+Persisting failed: Unable to commit operations
+
+Caused by:
+    0: Unable to write meta file 00000543.meta
+    1: The requested operation cannot be performed on a file with a user-mapped section open. (os error 1224)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 6.4s (compile: 2.0s, render: 4.4s)
+ GET /apple-touch-icon.png 404 in 1539ms (compile: 589ms, render: 950ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 2.7s (compile: 2.5s, render: 222ms)
+ GET /apple-touch-icon.png 404 in 767ms (compile: 83ms, render: 684ms)
+ GET /about 200 in 2.2s (compile: 1830ms, render: 387ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog 200 in 2.0s (compile: 1900ms, render: 136ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 180ms (compile: 36ms, render: 144ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 853ms (compile: 34ms, render: 819ms)
+ GET /projects 200 in 956ms (compile: 24ms, render: 932ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /api/api-key 200 in 1783ms (compile: 1734ms, render: 49ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Γ£ô Compiled in 11.8s
+ GET / 200 in 2.6s (compile: 722ms, render: 1858ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 809ms
+ GET / 200 in 1690ms (compile: 94ms, render: 1596ms)
+Γ£ô Compiled in 502ms
+ GET / 200 in 1062ms (compile: 35ms, render: 1027ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 1533ms (compile: 361ms, render: 1171ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /about 200 in 1517ms (compile: 684ms, render: 833ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog 200 in 885ms (compile: 478ms, render: 407ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog/why-i-choose-frd 200 in 6.2s (compile: 4.9s, generate-params: 2.4s, render: 1276ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 901ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog/why-i-choose-frd 200 in 3.3s (compile: 702ms, generate-params: 31ms, render: 2.6s)
+ GET /apple-touch-icon.png 404 in 513ms (compile: 52ms, render: 461ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog 200 in 1045ms (compile: 136ms, render: 909ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 1492ms (compile: 234ms, render: 1258ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 173ms (compile: 74ms, render: 100ms)
+ GET /apple-touch-icon.png 404 in 565ms (compile: 66ms, render: 499ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 228ms (compile: 80ms, render: 148ms)
+ GET /about 200 in 100ms (compile: 27ms, render: 74ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 510ms
+Γ£ô Compiled in 486ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 225ms (compile: 65ms, render: 160ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 158ms (compile: 42ms, render: 116ms)
+ GET /projects 200 in 132ms (compile: 31ms, render: 101ms)
+ GET /projects 200 in 129ms (compile: 31ms, render: 98ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 137ms (compile: 33ms, render: 104ms)
+ GET /projects 200 in 127ms (compile: 29ms, render: 98ms)
+ GET /projects 200 in 176ms (compile: 26ms, render: 150ms)
+ GET /projects 200 in 92ms (compile: 19ms, render: 73ms)
+ GET / 200 in 222ms (compile: 28ms, render: 194ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 273ms (compile: 48ms, render: 225ms)
+ GET /projects 200 in 164ms (compile: 40ms, render: 125ms)
+ GET /projects 200 in 127ms (compile: 33ms, render: 94ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 210ms (compile: 77ms, render: 133ms)
+ GET /apple-touch-icon.png 404 in 636ms (compile: 96ms, render: 541ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 868ms
+Γ£ô Compiled in 636ms
+ GET / 200 in 2.4s (compile: 53ms, render: 2.3s)
+Γ£ô Compiled in 741ms
+ GET / 200 in 2.1s (compile: 36ms, render: 2.0s)
+ GET / 200 in 1513ms (compile: 44ms, render: 1468ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 118ms
+ GET / 200 in 2.3s (compile: 49ms, render: 2.3s)
+ GET /projects 200 in 977ms (compile: 580ms, render: 397ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /projects 200 in 1606ms (compile: 19ms, render: 1587ms)
+ GET /apple-touch-icon.png 404 in 1010ms (compile: 69ms, render: 941ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /about 200 in 169ms (compile: 68ms, render: 101ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 153ms (compile: 59ms, render: 94ms)
+Γ£ô Compiled in 1196ms
+ GET / 200 in 772ms (compile: 332ms, render: 440ms)
+ GET / 200 in 2.7s (compile: 668ms, render: 2.0s)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog/making-coding-a-daily-habit 200 in 1054ms (compile: 461ms, generate-params: 26ms, render: 593ms)
+ GET /apple-touch-icon.png 404 in 577ms (compile: 88ms, render: 490ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog 200 in 91ms (compile: 30ms, render: 62ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog/focusing-on-one-programming-language 200 in 185ms (compile: 41ms, generate-params: 13ms, render: 144ms)
+ GET /blog 200 in 83ms (compile: 25ms, render: 58ms)
+ GET /blog/how-to-build-a-basic-react-todo-app 200 in 158ms (compile: 35ms, generate-params: 11ms, render: 122ms)
+Γ£ô Compiled in 798ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /blog 200 in 94ms (compile: 35ms, render: 59ms)
+Γ£ô Compiled in 616ms
+ GET /apple-touch-icon.png 404 in 1533ms (compile: 202ms, render: 1331ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /candies 200 in 1141ms (compile: 980ms, render: 160ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ΓÜá The requested resource "/chibi.gif" is an animated image so it will not be optimized. Consider adding the "unoptimized" property to the <Image>.
+Γ£ô Compiled in 1953ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /roaastme 200 in 1580ms (compile: 1486ms, render: 95ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /apple-touch-icon.png 404 in 3.2s (compile: 1200ms, render: 1960ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 300ms
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /about 200 in 444ms (compile: 309ms, render: 135ms)
+ GET /apple-touch-icon.png 404 in 418ms (compile: 42ms, render: 376ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ£ô Compiled in 2.9s
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:231:1
+Ecmascript file had an error
+  229 |   );
+  230 | }
+> 231 | export default ElormAi;
+      | ^^^^^^^^^^^^^^^^^^^^^^^
+  232 |
+
+the name `default` is exported multiple times
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+
+
+./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γùï Compiling /_error ...
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /about 500 in 10.1s (compile: 8.2s, render: 1848ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Γ¿» ./Desktop/projects/elorm/components/elorm-ai.tsx:11:1
+Module not found: Can't resolve 'framer-motion'
+   9 | import { configStream } from "@/utils/gemini-ai";
+  10 | import MarkdownPreview from "./markdown/markdown-preview";
+> 11 | import { AnimatePresence, motion } from "framer-motion";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | interface Message {
+  14 |   role: "user" | "agent";
+
+
+
+Import trace:
+  Server Component:
+    ./Desktop/projects/elorm/components/elorm-ai.tsx
+    ./Desktop/projects/elorm/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Γ£ô Compiled in 4.3s
+ GET /about 200 in 2.8s (compile: 1299ms, render: 1520ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /apple-touch-icon.png 404 in 3.0s (compile: 849ms, render: 2.2s)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET /api/api-key 200 in 118ms (compile: 9ms, render: 109ms)
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Γ£ô Compiled in 5.9s
+ GET /about 200 in 714ms (compile: 145ms, render: 570ms)
+ GET /about 200 in 1275ms (compile: 26ms, render: 1249ms)
+ GET /about 200 in 1275ms (compile: 72ms, render: 1203ms)
+ GET /about 200 in 905ms (compile: 19ms, render: 886ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+ GET / 200 in 529ms (compile: 284ms, render: 246ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+  Reload env: .env
+Γ£ô Compiled in 0ms
+ GET / 200 in 1500ms (compile: 199ms, render: 1301ms)
+ GET / 200 in 415ms (compile: 21ms, render: 394ms)
+ GET /apple-touch-icon.png 404 in 367ms (compile: 164ms, render: 204ms)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+error: script "dev" exited with code 1

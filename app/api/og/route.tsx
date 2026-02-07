@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
+
 
 export async function GET(request: NextRequest) {
   try {
@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     // Get parameters from URL
     const title = searchParams.get("title") || "elorm.tsx";
     const description =
-      searchParams.get("description") || "super creative frontend developer";
+      searchParams.get("description") || "super creative software engineer";
     const type = searchParams.get("type") || "default"; // default, blog, project, etc.
 
     // Define color schemes for different types

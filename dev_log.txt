@@ -1,0 +1,21 @@
+$ next dev -p "3001"
+ΓÜá `experimental.cacheComponents` has been moved to `cacheComponents`. Please update your next.config.mjs file accordingly.
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\princ\yarn.lock as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\princ\Desktop\projects\elorm\bun.lock
+
+Γû▓ Next.js 16.1.6 (Turbopack, Cache Components)
+- Local:         http://localhost:3001
+- Network:       http://10.242.236.120:3001
+- Environments: .env
+- Experiments (use with caution):
+  Γ£ô cacheComponents
+
+Γ£ô Starting...
+Γ¿» Unable to acquire lock at C:\Users\princ\Desktop\projects\elorm\.next\dev\lock, is another instance of next dev running?
+  Suggestion: If you intended to restart next dev, terminate the other process, and then try again.
+[?25h
+error: script "dev" exited with code 1

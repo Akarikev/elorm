@@ -48,19 +48,19 @@ export const metadata: Metadata = {
   ],
 };
 
-function page() {
-  const blogs = getCategorizedBlogs();
+async function page() {
+  const blogs = await getCategorizedBlogs();
 
   return (
-    <div className="flex flex-col min-h-screen px-4 md:px-10 lg:px-40 bg-muted/50">
+    <div className="flex flex-col min-h-screen px-4 md:px-10 lg:px-40 bg-background">
       {/* Page Header */}
-      <header className="w-full max-w-4xl mx-auto pt-16 pb-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-3 font-mono">
-          Blog
+      {/* Page Header */}
+      <header className="w-full max-w-4xl mx-auto pt-24 pb-16">
+        <h1 className="font-serif text-6xl md:text-7xl font-medium tracking-tight mb-6 text-foreground">
+          Writing<span className="text-primary">.</span>
         </h1>
-        <p className="text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-          Insightful articles on web development, programming, and tech by
-          Prince Elorm. Minimal, modern, and easy to read.
+        <p className="text-xl text-muted-foreground font-light max-w-2xl leading-relaxed">
+          Thoughts on technology, design, and everything in between.
         </p>
       </header>
 

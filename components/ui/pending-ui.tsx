@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 
 function PendingUI() {
   const router = useRouter();
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

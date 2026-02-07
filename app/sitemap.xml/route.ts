@@ -4,7 +4,7 @@ import moment from "moment";
 
 export async function GET() {
   const baseUrl = "https://elorm.xyz";
-  const blogs = getSortedBlog();
+  const blogs = await getSortedBlog();
 
   const staticPages = [
     {
@@ -47,7 +47,7 @@ export async function GET() {
 
   const blogPages = blogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.id}`,
-    lastModified: moment(blog.date, "DD-MM-YYYY").toDate(),
+    lastModified: moment(blog.date, "MM-DD-YYYY").toDate(),
     changeFrequency: "monthly",
     priority: 0.6,
   }));

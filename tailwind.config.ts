@@ -22,6 +22,7 @@ const config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
         mono: ["var(--font-geist-mono)", ...fontFamily.mono],
+        serif: ["var(--font-instrument)", ...fontFamily.serif],
       },
 
       colors: {

@@ -9,15 +9,16 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamic = "force-dynamic";
+
 export async function generateStaticParams() {
-  const articles = getSortedBlog();
-  return articles.map((article) => ({
+  const articles = await getSortedBlog();
+  return articles.map((article: any) => ({
     slug: article.id,
   }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
+  "use cache";
   const resolvedParams = await params;
   const getBlogsData = await getBlogData(resolvedParams.slug);
 
@@ -72,7 +73,7 @@ export async function generateMetadata({ params }: PageProps) {
       "AI",
       "coding blogs",
       "nextjs",
-      "frontend developer",
+      "software engineer",
       "reactjs",
       `${getBlogsData.title}`,
     ],
@@ -84,46 +85,58 @@ const Blog = async ({ params }: PageProps) => {
   const blogData = await getBlogData(resolvedParams.slug);
 
   return (
-    <section className="flex min-h-screen flex-col mt-16 px-4 md:p-10  md:px-32 md:mx-10 lg:mx-40">
-      {/* Back Link */}
-      <div className="pb-4">
-        <Link
-          href={"/blog"}
-          className="inline-flex items-center gap-2 rounded border border-border px-3 py-1.5 text-sm font-mono text-muted-foreground hover:border-primary hover:text-primary transition-colors"
-        >
-          <ArrowLeftIcon className="w-4 h-4" />
-          <span>Back to blogs</span>
-        </Link>
-      </div>
-
-      {/* Blog Header */}
-      <header className="w-full max-w-3xl mx-auto text-center mb-8">
-        <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight mb-2 font-mono leading-tight">
-          {blogData.title}
-        </h1>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground font-light mb-2">
-          <span>
-            By <span className="font-semibold text-primary">elorm</span>
-          </span>
-          <span className="hidden md:inline">&middot;</span>
-          <span>{blogData.date.toString()}</span>
+    <article className="min-h-screen bg-background text-foreground">
+      <div className="container mx-auto px-6 md:px-32 lg:px-40 py-24 md:py-32">
+        {/* Back Link */}
+        <div className="mb-12">
+          <Link
+            href={"/blog"}
+            className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <ArrowLeftIcon className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            <span>Back to writing</span>
+          </Link>
         </div>
-        <div className="h-px w-12 bg-border mx-auto my-4" />
-      </header>
 
-      {/* Blog Content */}
-      <article className="w-full max-w-3xl mx-auto bg-card/80 rounded-lg shadow-sm">
-        <MarkdownPreview
-          className="mt-10 lg:mt-9 flex flex-col gap-2 leading-5  lg:leading-normal prose prose-neutral dark:prose-invert prose-headings:font-bold prose-headings:font-mono prose-p:leading-relaxed prose-img:rounded-lg prose-img:mx-auto"
-          content={blogData.contentHTML}
-        />
-      </article>
+        {/* Blog Header */}
+        <header className="max-w-3xl mx-auto mb-16 text-center md:text-left">
+           <div className="flex items-center gap-3 text-sm text-muted-foreground font-mono mb-6 justify-center md:justify-start">
+              <time dateTime={blogData.date}>
+                {(() => {
+                  // Parse MM-DD-YYYY format
+                  const [month, day, year] = blogData.date.split('-');
+                  const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+                  return new Intl.DateTimeFormat('en-US', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: '2-digit' 
+                  }).format(date);
+                })()}
+              </time>
+              <span>•</span>
+              <span>Elorm</span>
+           </div>
 
-      {/* Comments/Discussions */}
-      <div className="w-full max-w-3xl mx-auto mt-12 border-t border-border pt-8">
-        <Discussions />
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1] mb-8 text-foreground">
+            {blogData.title}
+          </h1>
+        </header>
+
+        {/* Blog Content */}
+        <div className="max-w-3xl mx-auto">
+          <MarkdownPreview
+            className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:font-medium prose-p:leading-relaxed prose-img:rounded-sm prose-a:text-primary prose-a:no-underline hover:prose-a:underline max-w-none text-muted-foreground"
+            content={blogData.contentHTML}
+          />
+        </div>
+
+        {/* Comments/Discussions */}
+        <div className="max-w-3xl mx-auto mt-20 pt-10 border-t border-border/40">
+          <Discussions />
+        </div>
       </div>
-    </section>
+    </article>
   );
 };
 

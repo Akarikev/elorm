@@ -1,269 +1,291 @@
 "use client";
 
-import { AudioLines, Bot, Send, ArrowUpRight, X } from "lucide-react";
+import { Bot, Send, X, Sparkles, MessageSquare } from "lucide-react";
 import React, { useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { configStream } from "@/utils/gemini-ai";
 import MarkdownPreview from "./markdown/markdown-preview";
+import { AnimatePresence, motion } from "framer-motion";
 
-function ChatBox({
-  messages,
-  userInput,
-  setUserInput,
-  isTyping,
-  handleSubmit,
-  inputRef,
-  showChatMenu,
-}: {
-  messages: { role: string; content: string }[];
-  userInput: string;
-  setUserInput: React.Dispatch<React.SetStateAction<string>>;
-  isTyping: boolean;
-  handleSubmit: (event: React.FormEvent) => void;
-  inputRef: React.RefObject<HTMLInputElement>;
-  showChatMenu: boolean;
-}) {
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  // Auto-scroll to bottom when new messages arrive
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
-  return (
-    <div
-      className={cn(
-        "fixed bottom-16 right-4 md:right-8 md:bottom-20 w-full max-w-sm md:max-w-md bg-white dark:bg-gray-800 shadow-2xl rounded-xl overflow-hidden z-50 transition-all duration-300 border border-border/50",
-        showChatMenu
-          ? "translate-y-0 opacity-100"
-          : "translate-y-full opacity-0"
-      )}
-    >
-      <Card className="border-0 shadow-none bg-transparent">
-        <CardHeader className="flex flex-row items-center pb-3 bg-muted/30">
-          <div className="flex items-center space-x-3">
-            <Avatar className="h-10 w-10">
-              <AvatarImage src="https://github.com/Akarikev.png" />
-              <AvatarFallback className="bg-blue-500 text-white text-sm">
-                EB
-              </AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="text-sm font-semibold leading-none">
-                elorm&apos;s AI buddy
-              </p>
-              <p className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse inline-block"></span>
-                Online & ready to chat!
-              </p>
-              {isTyping && (
-                <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
-                  <Bot className="w-3 h-3 animate-bounce" />
-                  <span>Thinking...</span>
-                </div>
-              )}
-            </div>
-          </div>
-        </CardHeader>
-        <CardContent className="max-h-60 overflow-y-auto p-3 space-y-3 bg-gray-50/50 dark:bg-gray-900/50">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={cn(
-                "flex w-max max-w-full flex-col gap-2 rounded-lg px-3 py-2 text-sm",
-                message.role === "user"
-                  ? "ml-auto bg-blue-500 text-white"
-                  : "bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-white"
-              )}
-            >
-              {message.content ? (
-                <MarkdownPreview content={message.content} />
-              ) : (
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                      style={{ animationDelay: "0.1s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                  </div>
-                  <span className="text-xs">AI is thinking...</span>
-                </div>
-              )}
-            </div>
-          ))}
-          <div ref={messagesEndRef} />
-        </CardContent>
-        <CardFooter className="bg-white dark:bg-gray-800 border-t border-border/50 p-3">
-          <div className="flex w-full items-center space-x-2">
-            <Input
-              placeholder="Ask me anything! 💬"
-              className="flex-1 border-border/50 focus:border-primary"
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              ref={inputRef}
-              onKeyPress={(e) => e.key === "Enter" && handleSubmit(e)}
-            />
-            <Button
-              size="icon"
-              disabled={!userInput.trim()}
-              onClick={handleSubmit}
-              className="bg-blue-500 hover:bg-blue-600"
-            >
-              <Send className="h-4 w-4" />
-              <span className="sr-only">Send</span>
-            </Button>
-          </div>
-        </CardFooter>
-      </Card>
-    </div>
-  );
+interface Message {
+  role: "user" | "agent";
+  content: string;
 }
 
-function ElormAi() {
-  const [userInput, setUserInput] = useState("");
-  const [messages, setMessages] = useState([
+export default function ElormAi() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([
     {
       role: "agent",
       content:
-        "Hey there! 👋 I'm elorm's AI buddy! Ask me anything about his work, projects, or just chat - I'm here to help and have fun! 😄",
+        "Hi! I'm an AI assistant trained on Elorm's work. Ask me anything about his projects, skills, blog posts, or experience!",
     },
   ]);
-  const [showChatMenu, setShowChatMenu] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [showAttentionArrow, setShowAttentionArrow] = useState(true);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const inputRef = useRef<HTMLInputElement | null>(null);
-
-  // Auto-hide attention arrow after 8 seconds
+  // Auto-scroll to bottom
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowAttentionArrow(false);
-    }, 8000);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, isTyping, isOpen]);
 
-    return () => clearTimeout(timer);
-  }, []);
+  // Focus input when opening
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => inputRef.current?.focus(), 100);
+    }
+  }, [isOpen]);
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    const trimmedInput = userInput.trim();
-    if (!trimmedInput) return;
+  const handleSubmit = async (e?: React.FormEvent) => {
+    e?.preventDefault();
+    if (!inputValue.trim() || isTyping) return;
 
-    // Add user message and empty agent message at the same time
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "user",
-        content: trimmedInput,
-      },
-      {
-        role: "agent",
-        content: "",
-      },
-    ]);
-    setUserInput("");
+    const userMessage = inputValue.trim();
+    setInputValue("");
+    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
     setIsTyping(true);
 
     try {
-      let streamedContent = "";
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: userMessage }),
+      });
 
-      await configStream(trimmedInput, (chunk: string) => {
-        streamedContent += chunk;
+      if (!response.ok) {
+        throw new Error("Failed to get response");
+      }
+
+      // Create a placeholder for the streaming response
+      setMessages((prev) => [...prev, { role: "agent", content: "" }]);
+
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+
+      if (!reader) {
+        throw new Error("No reader available");
+      }
+
+      let fullResponse = "";
+      
+      while (true) {
+        const { done, value } = await reader.read();
+        
+        if (done) break;
+        
+        const chunk = decoder.decode(value, { stream: true });
+        fullResponse += chunk;
+        
+        // Update the last message with the accumulated response
         setMessages((prev) => {
           const newMessages = [...prev];
-          // Update the last message (which is the agent message)
           newMessages[newMessages.length - 1] = {
             role: "agent",
-            content: streamedContent,
+            content: fullResponse,
           };
           return newMessages;
         });
-      });
-
-      setIsTyping(false);
+      }
     } catch (error) {
-      console.error("Error fetching AI response:", error);
-      setMessages((prev) => {
-        const newMessages = [...prev];
-        newMessages[newMessages.length - 1] = {
+      console.error("Error thinking:", error);
+      setMessages((prev) => [
+        ...prev,
+        {
           role: "agent",
-          content: "Sorry, something went wrong. Please try again! 😅",
-        };
-        return newMessages;
-      });
-      setIsTyping(false);
+          content: "Sorry, I encountered an error. Please try again.",
+        },
+      ]);
     } finally {
-      inputRef.current?.focus();
+      setIsTyping(false);
     }
   };
 
   return (
-    <div>
-      <ChatBox
-        messages={messages}
-        userInput={userInput}
-        setUserInput={setUserInput}
-        isTyping={isTyping}
-        handleSubmit={handleSubmit}
-        inputRef={inputRef}
-        showChatMenu={showChatMenu}
-      />
-
-      {/* Attention Arrow - shows only when chat is closed and for first few seconds */}
-      {!showChatMenu && showAttentionArrow && (
-        <div className="fixed bottom-20 right-8 md:bottom-24 md:right-10 z-40 animate-bounce">
-          <div className="relative bg-white/90 backdrop-blur-md border border-gray-200 dark:bg-gray-800/90 dark:border-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg shadow-xl">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowAttentionArrow(false);
-              }}
-              className="absolute -top-2 -right-2 bg-white text-gray-600 hover:text-gray-800 rounded-full p-1 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-110"
-            >
-              <X className="h-3 w-3" />
-            </button>
-            <div className="flex items-center gap-2 text-sm font-medium">
-              <Bot className="h-4 w-4" />
-              <span>Chat with me! 💬</span>
-              <ArrowUpRight className="h-4 w-4 animate-pulse" />
-            </div>
-            {/* Arrow pointing down to chatbot */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-8 border-transparent border-t-gray-200 dark:border-t-gray-700"></div>
-          </div>
-        </div>
-      )}
-
-      <div
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group"
-        onClick={() => {
-          setShowChatMenu((prev) => !prev);
-          setShowAttentionArrow(false); // Hide arrow once user interacts
-        }}
-      >
-        <div className="relative p-3 bg-white/20 backdrop-blur-md border border-white/30 text-gray-700 dark:text-gray-200 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/30">
-          <Bot className="h-5 w-5 group-hover:scale-110 transition-transform" />
-          <div className="absolute -top-1 -right-1 h-3 w-3 bg-green-400 rounded-full animate-pulse"></div>
-          {!showChatMenu && (
-            <div className="absolute -top-12 -left-8 bg-black/90 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap backdrop-blur-sm">
-              <div className="flex items-center gap-2">
-                <Bot className="h-3 w-3" />
-                <span>Chat with elorm&apos;s AI!</span>
+    <>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="fixed bottom-20 right-4 md:right-8 z-50 w-[90vw] md:w-[380px] h-[500px] max-h-[70vh] flex flex-col bg-background border border-black dark:border-4 dark:border-white/10 shadow-lg rounded-xl overflow-hidden font-sans"
+          >
+            {/* Minimal Header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border/40 bg-background/50 backdrop-blur-sm">
+              <div className="flex items-center gap-2.5">
+                <div className="relative">
+                  <div className="w-8 h-8 rounded-full overflow-hidden border border-border/50 bg-muted/20 flex items-center justify-center relative">
+                    <img 
+                      src="/chibi.gif" 
+                      alt="AI" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className="absolute bottom-0 right-0 w-2 h-2 bg-green-500 border-2 border-background rounded-full"></span>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold tracking-tight">Elorm AI</h3>
+                  <p className="text-[10px] text-muted-foreground font-medium">Online</p>
+                </div>
               </div>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-black/90"></div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-7 w-7 rounded-full hover:bg-muted/50 text-muted-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                <X className="h-4 w-4" />
+              </Button>
             </div>
+
+            {/* Messages Area */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background scrollbar-thin scrollbar-thumb-muted scrollbar-track-transparent">
+              {messages.map((msg, i) => (
+                <div
+                  key={i}
+                  className={cn(
+                    "flex flex-col max-w-[85%] space-y-1",
+                    msg.role === "user" ? "self-end items-end" : "self-start items-start"
+                  )}
+                >
+                  <div
+                    className={cn(
+                      "px-3 py-2 text-sm leading-relaxed",
+                      msg.role === "user"
+                        ? "bg-primary text-primary-foreground rounded-2xl rounded-tr-sm shadow-sm"
+                        : "bg-muted/30 text-foreground rounded-2xl rounded-tl-sm border border-border/40"
+                    )}
+                  >
+                    {msg.role === "agent" ? (
+                      <MarkdownPreview content={msg.content} className="text-sm prose-sm dark:prose-invert max-w-none" />
+                    ) : (
+                      msg.content
+                    )}
+                  </div>
+                </div>
+              ))}
+              
+              {isTyping && (
+                <div className="flex items-center gap-1.5 ml-1 mt-2">
+                   <div className="flex gap-1">
+                      <motion.span 
+                        animate={{ opacity: [0.4, 1, 0.4] }} 
+                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0 }}
+                        className="w-1.5 h-1.5 bg-muted-foreground/40 rounded-full"
+                      />
+                      <motion.span 
+                        animate={{ opacity: [0.4, 1, 0.4] }} 
+                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+                        className="w-1.5 h-1.5 bg-muted-foreground/40 rounded-full"
+                      />
+                      <motion.span 
+                        animate={{ opacity: [0.4, 1, 0.4] }} 
+                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: 0.4 }}
+                        className="w-1.5 h-1.5 bg-muted-foreground/40 rounded-full"
+                      />
+                   </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Minimal Input Area */}
+            <div className="p-3 bg-background border-t border-border/40">
+              <form
+                onSubmit={handleSubmit}
+                className="relative flex items-center"
+              >
+                <Input
+                  ref={inputRef}
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  placeholder="Type a message..."
+                  className="w-full pr-10 min-h-[44px] rounded-xl border-border/50 bg-muted/20 focus-visible:ring-1 focus-visible:ring-ring/20 focus-visible:border-primary/30 shadow-none text-sm placeholder:text-muted-foreground/70"
+                />
+                <Button
+                  type="submit"
+                  size="icon"
+                  disabled={!inputValue.trim() || isTyping}
+                  className={cn(
+                    "absolute right-1.5 h-8 w-8 rounded-lg transition-all duration-200",
+                    inputValue.trim() 
+                      ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm" 
+                      : "bg-transparent text-muted-foreground hover:bg-muted/50"
+                  )}
+                >
+                  <Send className="h-3.5 w-3.5" />
+                </Button>
+              </form>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Floating Toggle Button with Tooltip */}
+      <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <AnimatePresence>
+          {!isOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 10 }}
+              className="bg-primary/90 text-primary-foreground text-xs font-medium px-3 py-1.5 rounded-full shadow-md backdrop-blur-sm pointer-events-none"
+            >
+              Chat with AI
+            </motion.div>
           )}
-        </div>
+        </AnimatePresence>
+        
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsOpen(!isOpen)}
+          className={cn(
+            "rounded-full shadow-lg transition-all duration-300 flex items-center justify-center z-50",
+            isOpen 
+              ? "p-3.5 bg-background border border-border text-foreground hover:bg-muted/50" 
+              : "p-0 border-0 hover:shadow-xl" 
+          )}
+        >
+          <AnimatePresence mode="wait">
+            {isOpen ? (
+              <motion.div
+                key="close"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <X className="w-5 h-5" />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="open"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="w-12 h-12 rounded-full overflow-hidden relative shadow-sm border-2 border-black dark:border-white">
+                  <img 
+                    src="/chibi.gif" 
+                    alt="AI" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.button>
       </div>
-    </div>
+    </>
   );
 }
 
-export default ElormAi;

@@ -3,7 +3,7 @@ import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { Link } from "next-view-transitions";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -35,14 +35,20 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-instrument",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://elorm.xyz"),
   title: {
-    default: "elorm.tsx - Creative Frontend Developer",
+    default: "elorm.tsx - Creative Software Engineer",
     template: "%s | elorm.tsx",
   },
   description:
-    "Prince Elorm - Creative frontend developer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+    "Prince Elorm - Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
 
   icons: {
     icon: "/favicon.ico",
@@ -58,7 +64,7 @@ export const metadata: Metadata = {
   keywords: [
     "Prince Elorm",
     "elorm.tsx",
-    "frontend developer",
+    "software engineer",
     "software engineer",
     "React developer",
     "Next.js developer",
@@ -68,7 +74,7 @@ export const metadata: Metadata = {
     "African tech",
     "AI solutions",
     "web developer portfolio",
-    "hire frontend developer",
+    "hire software engineer",
     "creative developer",
     "full stack developer",
     "JavaScript developer",
@@ -84,29 +90,29 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://elorm.xyz",
-    title: "elorm.tsx - Creative Frontend Developer",
+    title: "elorm.tsx - Creative Software Engineer",
     description:
-      "Prince Elorm - Creative frontend developer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+      "Prince Elorm - Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
     siteName: "elorm.tsx",
     images: [
       {
-        url: "/api/og?title=elorm.tsx&description=Creative Frontend Developer&type=default",
+        url: "/api/og?title=elorm.tsx&description=Creative Software Engineer&type=default",
         width: 1200,
         height: 630,
-        alt: "elorm.tsx - Creative Frontend Developer",
+        alt: "elorm.tsx - Creative Software Engineer",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "elorm.tsx - Creative Frontend Developer",
+    title: "elorm.tsx - Creative Software Engineer",
     description:
-      "Prince Elorm - Creative frontend developer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+      "Prince Elorm - Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
     creator: "@elorm_elom",
     site: "@elorm_elom",
     images: [
-      "/api/og?title=elorm.tsx&description=Creative Frontend Developer&type=default",
+      "/api/og?title=elorm.tsx&description=Creative Software Engineer&type=default",
     ],
   },
 
@@ -166,7 +172,7 @@ export default function RootLayout({
       "Machine Learning",
     ],
     description:
-      "Creative frontend developer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
+      "Creative software engineer specializing in React, Next.js, and modern web technologies. Software engineer at All Labs building AI solutions for African languages.",
   };
 
   return (
@@ -182,7 +188,8 @@ export default function RootLayout({
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
             geistSans.variable,
-            geistMono.variable
+            geistMono.variable,
+            instrumentSerif.variable
           )}
         >
           <ThemeProvider
@@ -195,139 +202,44 @@ export default function RootLayout({
             {children}
             <ElormAi />
 
-            {/* Modern Footer */}
-            <footer className="border-t bg-muted/30 mt-20">
-              <div className="container mx-auto px-6 md:px-32 lg:px-40 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {/* Brand Section */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                      <span className="relative inline-block transform -rotate-1 bg-green-500 text-white px-3 py-1 border-2 border-green-600 shadow-md text-lg font-bold font-mono">
-                        <span className="relative z-10">elorm.tsx</span>
-                        <div className="absolute inset-0 bg-green-400 opacity-50 transform skew-x-6"></div>
-                      </span>
-                      <p className="flex items-center gap-1 text-xs">
-                        <Leaf className="h-3 w-3 text-green-500" />
-                        {"c-bonsai"}
-                      </p>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Super creative frontend developer passionate about
-                      building beautiful, functional experiences.
+            {/* Minimal Footer */}
+            <footer className="border-t border-border/40 mt-20 bg-background">
+              <div className="container mx-auto px-6 md:px-32 lg:px-40 py-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-sm">
+                  
+                  <div className="space-y-2">
+                    <span className="font-serif text-xl font-medium tracking-tight">elorm.tsx</span>
+                    <p className="text-muted-foreground flex items-center gap-1">
+                      © {currentYear} • Built with <Heart className="h-3 w-3 text-red-500 fill-current" /> in Ghana
                     </p>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      <span>Proudly Ghanaian</span>
-                      <span className="text-pink-500">(❁´◡`❁)</span>
-                    </div>
                   </div>
 
-                  {/* Quick Links */}
-                  <div className="space-y-4">
-                    <h4 className="text-sm font-semibold">Quick Links</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      <Link
-                        href="/about"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        About
-                      </Link>
-                      <Link
-                        href="/projects"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        Projects
-                      </Link>
-                      <Link
-                        href="/blog"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        Blog
-                      </Link>
-                      <Link
-                        href="https://www.africanlanguageslab.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
-                      >
-                        All Labs
-                        <ExternalLink className="h-3 w-3" />
-                      </Link>
-                    </div>
+                  <div className="flex flex-wrap gap-8 text-muted-foreground">
+                    <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+                    <Link href="/projects" className="hover:text-foreground transition-colors">Projects</Link>
+                    <Link href="/blog" className="hover:text-foreground transition-colors">Writing</Link>
+                    <Link href="mailto:princeelorm17@gmail.com" className="hover:text-foreground transition-colors">Contact</Link>
                   </div>
 
-                  {/* Fun Projects */}
-                  <div className="space-y-4">
-                    <h4 className="text-sm font-semibold">Fun Projects</h4>
-                    <div className="flex flex-col space-y-3">
-                      <Link
-                        href="/candies"
-                        className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <span className="inline-flex items-center gap-1 px-2 py-1 bg-pink-100 dark:bg-pink-950/20 text-pink-600 dark:text-pink-400 rounded-full text-xs font-medium">
-                          <IceCream className="h-3 w-3" />
-                          Candies
-                        </span>
-                      </Link>
-                      <Link
-                        href="/roaastme"
-                        className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <span className="inline-flex items-center gap-1 px-2 py-1 bg-orange-100 dark:bg-orange-950/20 text-orange-600 dark:text-orange-400 rounded-full text-xs font-medium">
-                          <Sparkles className="h-3 w-3" />
-                          Roaast Me
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Connect & Credits */}
-                  <div className="space-y-4">
-                    <h4 className="text-sm font-semibold">Connect</h4>
-                    <div className="flex space-x-4">
-                      <Link
+                  <div className="flex items-center gap-4">
+                     <Link
                         href="https://github.com/Akarikev"
-                        className="p-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-foreground transition-colors"
                       >
                         <GitHubLogoIcon className="h-5 w-5" />
                         <span className="sr-only">GitHub</span>
                       </Link>
                       <Link
                         href="https://twitter.com/elorm_elom"
-                        className="p-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-foreground transition-colors"
                       >
                         <TwitterLogoIcon className="h-5 w-5" />
                         <span className="sr-only">Twitter</span>
                       </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Bar */}
-                <div className="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                  <div className="text-sm text-muted-foreground">
-                    <p className="flex items-center gap-2">
-                      &c&copy; {currentYear} Develps Inc. All rights reserved.
-                      <span className="inline-flex items-center gap-1">
-                        Made with{" "}
-                        <Heart
-                          className="h-3 w-3 text-red-500"
-                          fill="currentColor"
-                        />{" "}
-                        and <Coffee className="h-3 w-3 text-amber-600" />
-                      </span>
-                    </p>
-                  </div>
-
-                  <div className="text-xs text-muted-foreground font-mono">
-                    <p className="flex items-center gap-1">
-                      <Leaf className="h-3 w-3 text-green-500" />
-                      {"camry bonsai v1.1a"}
-                    </p>
                   </div>
                 </div>
               </div>

@@ -17,10 +17,10 @@ export const featuredContent: contentType = [
   },
   {
     id: 2,
-    contentName: "Talkee.app",
-    contentLink: "https://talkeeapp.netlify.app",
+    contentName: "TinyFolio",
+    contentLink: "https://tinyfolio.link",
     contentDescription:
-      "Talkee is a platform where users can freely share their thoughts and ideas anonymously with others in a social setting.",
+      "A developer-first platform designed to create minimalist, high-performance portfolios in seconds. Built for speed and simplicity, it lets you showcase your work without the overhead.",
     isLive: true,
   },
   {

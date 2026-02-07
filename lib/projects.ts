@@ -31,6 +31,14 @@ export const featuredContent: contentType = [
       "A Spotify-powered community app that lets you create tribes where you can share playlists and discover new music together. In development with exclusive early access available.",
     isLive: false,
   },
+  {
+    id: 8,
+    contentName: "TinyFolio",
+    contentLink: "https://tinyfolio.link",
+    contentDescription:
+      "A developer-first platform designed to create minimalist, high-performance portfolios in seconds. Built for speed and simplicity, it lets you showcase your work without the overhead.",
+    isLive: true,
+  },
 ];
 
 export const devTools: contentType = [

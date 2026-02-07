@@ -4,11 +4,12 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    /* Stylish Cream Background */
+    --background: 35 30% 96%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card: 35 30% 96%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;

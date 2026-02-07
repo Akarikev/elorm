@@ -1,7 +1,12 @@
+"use client";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useId } from "react";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+import Image from "next/image";
+import { AudioPlayer } from "@/components/ui/audio-player";
 // import hljs from "highlight.js/lib/core";
 // import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/atom-one-dark.min.css";
@@ -16,7 +21,7 @@ function MarkdownPreview({
   className?: string;
 }) {
   //   const geLang = hljs.registerLanguage("javascript", javascript);
-  const id = Math.floor(Math.random() * 100 + 1).toString();
+  const baseId = useId();
   return (
     <Markdown
       className={cn("space-y-6", className)}
@@ -41,7 +46,14 @@ function MarkdownPreview({
           return <h3 {...props} className="text-xl" />;
         },
         a: ({ node, ...props }) => {
-          return <a {...props} className="underline text-gray-400" />;
+          return (
+            <a 
+              {...props} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-medium underline decoration-blue-400/30 underline-offset-2 text-blue-600 dark:text-blue-400 hover:decoration-blue-600 dark:hover:decoration-blue-400 transition-all duration-200" 
+            />
+          );
         },
         code: ({ node, children, className, ...props }) => {
           const match = /language-(\w+)/.exec(className || "");
@@ -49,8 +61,7 @@ function MarkdownPreview({
             //!todo: do something... might do this later
 
             let Icon = TerminalSquareIcon;
-            const id = Math.floor(Math.random() * 100 + 1).toString();
-            console.log(id);
+            const uniqueId = `${baseId}-${node?.position?.start.offset || "code"}`;
             return (
               <div className=" border-2 rounded-md">
                 <div className="px-5 py-2 border-b flex justify-between items-center">
@@ -65,11 +76,11 @@ function MarkdownPreview({
                       }
                     </span>
                   </div>
-                  <CopyButton id={id} />
+                  <CopyButton id={uniqueId} />
                 </div>
 
                 <div className="overflow-x-auto w-full">
-                  <div className="p-5" id={id}>
+                  <div className="p-5" id={uniqueId}>
                     {children}
                   </div>
                 </div>
@@ -83,8 +94,30 @@ function MarkdownPreview({
             );
           }
         },
+        img: ({ node, ...props }) => {
+          return (
+            <img 
+              {...props} 
+              className="rounded-lg w-full h-auto my-8" 
+              loading="lazy"
+            />
+          );
+        },
+        audio: ({ node, ...props }) => {
+          // Extract src from children (source elements)
+          const sourceElement = node?.children?.find(
+            (child: any) => child.tagName === 'source'
+          );
+          // Type guard: ensure sourceElement is an Element (has properties) not Text
+          const src = (sourceElement && 'properties' in sourceElement) 
+            ? sourceElement.properties?.src 
+            : props.src || '';
+          
+          return <AudioPlayer src={src as string} title="Listen to this article" />;
+        },
       }}
-      rehypePlugins={[rehypeHighlight]}
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw, rehypeHighlight]}
     >
       {content}
     </Markdown>

@@ -1,8 +1,11 @@
 "use client";
 import Giscus from "@giscus/react";
 import React, { Fragment } from "react";
+import { useTheme } from "next-themes";
 
-function Discussions() {
+const Discussions = () => {
+  const { resolvedTheme } = useTheme();
+
   return (
     <Fragment>
       <Giscus
@@ -16,7 +19,7 @@ function Discussions() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="bottom"
-        theme="preferred_color_scheme"
+        theme={resolvedTheme === "dark" ? "dark" : "light"}
         lang="en"
         term="what you think?"
         loading="lazy"
@@ -24,6 +27,6 @@ function Discussions() {
       />
     </Fragment>
   );
-}
+};
 
 export default Discussions;

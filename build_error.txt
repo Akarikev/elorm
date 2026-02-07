@@ -1,0 +1,189 @@
+$ next build
+ΓÜá `experimental.cacheComponents` has been moved to `cacheComponents`. Please update your next.config.mjs file accordingly.
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\princ\yarn.lock as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\princ\Desktop\projects\elorm\bun.lock
+
+Γû▓ Next.js 16.1.6 (Turbopack, Cache Components)
+- Environments: .env
+- Experiments (use with caution):
+  Γ£ô cacheComponents
+
+  Creating an optimized production build ...
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+> Build error occurred
+Error: Turbopack build failed with 6 errors:
+./Desktop/projects/elorm/app/api/og/route.tsx:4:14
+Ecmascript file had an error
+  2 | import { NextRequest } from "next/server";
+  3 |
+> 4 | export const runtime = "edge";
+    |              ^^^^^^^
+  5 |
+  6 | export async function GET(request: NextRequest) {
+  7 |   try {
+
+Route segment config "runtime" is not compatible with `nextConfig.cacheComponents`. Please remove it.
+
+
+./Desktop/projects/elorm/app/blog/[slug]/page.tsx:12:14
+Ecmascript file had an error
+  10 | };
+  11 |
+> 12 | export const dynamic = "force-dynamic";
+     |              ^^^^^^^
+  13 | export async function generateStaticParams() {
+  14 |   const articles = await getSortedBlog();
+  15 |   return articles.map((article: any) => ({
+
+Route segment config "dynamic" is not compatible with `nextConfig.cacheComponents`. Please remove it.
+
+
+./Desktop/projects/elorm/lib/articles.ts:13:3
+Ecmascript file had an error
+  11 |
+  12 | export const getSortedBlog = async (): Promise<blogItemType[]> => {
+> 13 |   "use cache";
+     |   ^^^^^^^^^^^
+  14 |   const fileNames = fs.readdirSync(blogDir);
+  15 |
+  16 |   const allBlogs = fileNames.map((fileName) => {
+
+It is not allowed to define inline "use cache" annotated functions in Client Components.
+To use "use cache" functions in a Client Component, you can either export them from a separate file with "use cache" or "use server" at the top, or pass them down through props from a Server Component.
+
+
+Import traces:
+  App Route:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/sitemap.xml/route.ts
+
+  Server Component:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/blog/page.tsx
+
+  Client Component Browser:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+
+./Desktop/projects/elorm/lib/articles.ts:47:3
+Ecmascript file had an error
+  45 |
+  46 | export const getCategorizedBlogs = async (): Promise<Record<string, blogItemType[]>> => {
+> 47 |   "use cache";
+     |   ^^^^^^^^^^^
+  48 |   const sortedBlogs = await getSortedBlog();
+  49 |   const categorizedBlogs: Record<string, blogItemType[]> = {};
+  50 |
+
+It is not allowed to define inline "use cache" annotated functions in Client Components.
+To use "use cache" functions in a Client Component, you can either export them from a separate file with "use cache" or "use server" at the top, or pass them down through props from a Server Component.
+
+
+Import traces:
+  App Route:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/sitemap.xml/route.ts
+
+  Server Component:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/blog/page.tsx
+
+  Client Component Browser:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+
+./Desktop/projects/elorm/lib/articles.ts:62:3
+Ecmascript file had an error
+  60 |
+  61 | export const getBlogData = async (id: string) => {
+> 62 |   "use cache";
+     |   ^^^^^^^^^^^
+  63 |   const fullPath = path.join(blogDir, `${id}.md`);
+  64 |
+  65 |   const fileContent = fs.readFileSync(fullPath, "utf-8");
+
+It is not allowed to define inline "use cache" annotated functions in Client Components.
+To use "use cache" functions in a Client Component, you can either export them from a separate file with "use cache" or "use server" at the top, or pass them down through props from a Server Component.
+
+
+Import traces:
+  App Route:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/sitemap.xml/route.ts
+
+  Server Component:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/blog/page.tsx
+
+  Client Component Browser:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+
+./Desktop/projects/elorm/lib/articles.ts:1:1
+Module not found: Can't resolve 'fs'
+> 1 | import fs from "fs";
+    | ^^^^^^^^^^^^^^^^^^^^
+  2 | import path from "path";
+  3 | import matter from "gray-matter";
+  4 | import moment from "moment";
+
+
+
+Import traces:
+  App Route:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/sitemap.xml/route.ts
+
+  Server Component:
+    ./Desktop/projects/elorm/lib/articles.ts
+    ./Desktop/projects/elorm/app/blog/page.tsx
+
+  Client Component Browser:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component Browser]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Desktop/projects/elorm/lib/articles.ts [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Client Component SSR]
+    ./Desktop/projects/elorm/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./Desktop/projects/elorm/app/api/og/route.tsx:4:14)
+    at <unknown> (./Desktop/projects/elorm/app/blog/[slug]/page.tsx:12:14)
+    at <unknown> (./Desktop/projects/elorm/lib/articles.ts:13:3)
+    at <unknown> (./Desktop/projects/elorm/lib/articles.ts:47:3)
+    at <unknown> (./Desktop/projects/elorm/lib/articles.ts:62:3)
+    at <unknown> (./Desktop/projects/elorm/lib/articles.ts:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+error: script "build" exited with code 1
