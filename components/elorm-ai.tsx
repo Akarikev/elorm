@@ -131,7 +131,7 @@ export default function ElormAi() {
                   <span className="absolute bottom-0 right-0 w-2 h-2 bg-green-500 border-2 border-background rounded-full"></span>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold tracking-tight">Elorm AI</h3>
+                  <h3 className="text-sm font-semibold tracking-tight">elorm ai</h3>
                   <p className="text-[10px] text-muted-foreground font-medium">Online</p>
                 </div>
               </div>
